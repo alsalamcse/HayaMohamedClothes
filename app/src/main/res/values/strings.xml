@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">HayaMohamedClothes</string>
+    <string name="Email">Email</string>
+    <string name="Password">Password</string>
+    <string name="RePassword">Re-Password</string>
+    <string name="RePass">RePass</string>
+    <string name="Repassword">Repassword</string>
+</resources>

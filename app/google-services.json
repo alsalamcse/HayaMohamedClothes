@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "769377220258",
+    "firebase_url": "https://hayamohamedclothes.firebaseio.com",
+    "project_id": "hayamohamedclothes",
+    "storage_bucket": "hayamohamedclothes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:769377220258:android:05cf9ef1a37312cb",
+        "android_client_info": {
+          "package_name": "com.example.samsun81.hayamohamedclothes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "769377220258-6i45v7inb7cfbkhshfqv256utolmkhqv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.samsun81.hayamohamedclothes",
+            "certificate_hash": "3465ce93e7f00af32a7f6fed0af63ebf161d7fed"
+          }
+        },
+        {
+          "client_id": "769377220258-mopggejarm46igh8sjlne7hh5pi0apvi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALL26oXF3Pvk-I0dJtprSsey56s8VIMxs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "769377220258-mopggejarm46igh8sjlne7hh5pi0apvi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
