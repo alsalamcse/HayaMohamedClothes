@@ -14,16 +14,14 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class SignUp extends AppCompatActivity implements  View.OnClickListener{
-    private  EditText etEmail;
-    private  EditText etPassword ;
-    private  EditText etRepass;
-    private Button btSave ;
+public class SignUp extends AppCompatActivity implements  View.OnClickListener {
+    private EditText etEmail;
+    private EditText etPassword;
+    private EditText etRepass;
+    private Button btSave;
     private FirebaseAuth auth;
     private FirebaseUser firebaseUser;
 
-
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,17 +30,19 @@ public class SignUp extends AppCompatActivity implements  View.OnClickListener{
         etEmail = (EditText) findViewById(R.id.etEmail);
         etPassword = (EditText) findViewById(R.id.etPassword);
         etRepass = (EditText) findViewById(R.id.etRepass);
-         auth = FirebaseAuth.getInstance();
+        btSave = (Button) findViewById(R.id.btSave);
+        auth = FirebaseAuth.getInstance();
         firebaseUser = auth.getCurrentUser();
 
 
-        btSave.setOnClickListener();
+        btSave.setOnClickListener(this);
 
     }
+
     private void dataHandler() {
         String stemail = etEmail.getText().toString();
         String stpassword = etPassword.getText().toString();
-        String repassword = etRepass.getText().toString();
+        String repass = etRepass.getText().toString();
         boolean isOk = true;
         if (stemail.length() == 0 || stemail.indexOf('@') < 1) {
             etEmail.setError("WRONG EMAIL");
@@ -70,17 +70,24 @@ public class SignUp extends AppCompatActivity implements  View.OnClickListener{
                     task.getException().printStackTrace();
                 }
 
-            });
-            FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
-
-
-
+            }
+        });
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+    }
 
     @Override
     public void onClick(View view) {
-       if (btSave==view)
-          {
-             dataHandler();
-          }
 
+        if (btSave == view) {
+            dataHandler();
+
+        }
     }
+}
+
+
+
+
+
+
+

@@ -31,6 +31,7 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
         etEmail = (EditText) findViewById(R.id.etEmail);
         etPassword = (EditText) findViewById(R.id.etPassword);
         BtLogin = (Button) findViewById(R.id.BtLogin);
+        btSignup=(Button)findViewById(R.id. btSignup);
         BtLogin.setOnClickListener(this);
         btSignup.setOnClickListener(this);
         auth = FirebaseAuth.getInstance();
@@ -52,7 +53,7 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
                 if(task.isSuccessful())
                 {
                     Toast.makeText(HomeScreen.this, "signIn Successful.", Toast.LENGTH_SHORT).show();
-                    Intent intent=new Intent(HomeScreen.this,MainListActivity.class);
+                    Intent intent=new Intent(getBaseContext(), MyClost.class);
                     startActivity(intent);
                     finish();
                 }
@@ -68,17 +69,15 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
     @Override
     public void onClick(View view) {
 
-        if (view==BtLogin)
-        {
+        if (view == BtLogin) {
             dataHandler();
         }
 
-        if (view==btSignup)
-        {
-            Intent i = new Intent(this,SignUp.class);
+        if (view == btSignup) {
+            Intent i = new Intent(this, SignUp.class);
             startActivity(i);
 
 
-
+        }
     }
 }
