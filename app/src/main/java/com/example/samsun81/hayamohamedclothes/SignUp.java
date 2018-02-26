@@ -17,7 +17,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class SignUp extends AppCompatActivity implements  View.OnClickListener {
     private EditText etEmail;
     private EditText etPassword;
-    private EditText etRepass;
+    private EditText etRe;
     private Button btSave;
     private FirebaseAuth auth;
     private FirebaseUser firebaseUser;
@@ -29,7 +29,7 @@ public class SignUp extends AppCompatActivity implements  View.OnClickListener {
         setContentView(R.layout.activity_sign_up);
         etEmail = (EditText) findViewById(R.id.etEmail);
         etPassword = (EditText) findViewById(R.id.etPassword);
-        etRepass = (EditText) findViewById(R.id.etRepass);
+        etRe = (EditText) findViewById(R.id.etRe);
         btSave = (Button) findViewById(R.id.btSave);
         auth = FirebaseAuth.getInstance();
         firebaseUser = auth.getCurrentUser();
@@ -38,22 +38,22 @@ public class SignUp extends AppCompatActivity implements  View.OnClickListener {
         btSave.setOnClickListener(this);
 
     }
-
+// to deal with input data
     private void dataHandler() {
-        String stemail = etEmail.getText().toString();
-        String stpassword = etPassword.getText().toString();
-        String repass = etRepass.getText().toString();
-        boolean isOk = true;
-        if (stemail.length() == 0 || stemail.indexOf('@') < 1) {
+        String stEmail = etEmail.getText().toString();
+        String stPassword = etPassword.getText().toString();
+        String stRepass = etRe.getText().toString();
+        boolean isOk = true;// yo chek if all are correcttly
+        if (stEmail.length() == 0 || stEmail.indexOf('@') < 1) {
             etEmail.setError("WRONG EMAIL");
             isOk = false;
         }
-        if (stpassword.length() < 8) {
+        if (stPassword.length() < 8 || stPassword.equals(stRepass)==false) {
             etPassword.setError("BAD PASSWORD");
             isOk = false;
         }
         if (isOk) {
-            creatAcount(stemail, stpassword);
+            creatAcount(stEmail, stPassword);
         }
     }
 
@@ -72,7 +72,7 @@ public class SignUp extends AppCompatActivity implements  View.OnClickListener {
 
             }
         });
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
     }
 
     @Override
