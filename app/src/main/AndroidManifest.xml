@@ -20,7 +20,8 @@
         <activity
             android:name=".MyClost"
             android:label="@string/title_activity_my_clost"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".AddPicturre"></activity>
     </application>
 
 </manifest>
