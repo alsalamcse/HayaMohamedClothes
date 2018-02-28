@@ -22,7 +22,7 @@ public class ClothsFragment extends Fragment {
 
     private ViewPager mViewPager;
 
-}
+
 
 
 
@@ -36,20 +36,13 @@ public class ClothsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_cloths, container, false);
+        View view = inflater.inflate(R.layout.fragment_cloths, container, false);
+return  view;
 
-
-        btCamera=(FloatingActionButton)view.findViewById(R.id.btCamera);
-        FloatingActionButton btCamera = (FloatingActionButton) btCamera.findViewById();
-        btCamera.setOnClickListener(new View.OnClickListener() {
-
-
-            @Override
-            public void onClick(View view)
-            {
-                Intent i=new Intent(getBaseContext(),AddPicturre.class);
-                startActivity(i);
     }
+
+
+
 
 }
-    }
+

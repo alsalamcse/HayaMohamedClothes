@@ -20,7 +20,7 @@ public class AddPicturre extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_picturre);
 
-        BtTake=(Button) findViewById(R.id.button);
+        BtTake=(Button) findViewById(R.id.BtButton);
         imageView=(ImageView)findViewById(R.id.imageView);
         BtTake.setOnClickListener(new btnTakePhotoClicker());
     }
