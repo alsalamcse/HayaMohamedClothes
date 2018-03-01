@@ -8,6 +8,115 @@
     tools:context="com.example.samsun81.hayamohamedclothes.AddPicturre"
     android:weightSum="1">
 
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="NAME"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Time of the year" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/ibWinter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@color/common_google_signin_btn_text_light_disabled" />
+
+        <ImageButton
+            android:id="@+id/ibSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@color/common_google_signin_btn_text_dark_default" />
+
+        <ImageButton
+            android:id="@+id/ibAutumn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@color/common_google_signin_btn_text_light_default" />
+
+        <ImageButton
+            android:id="@+id/ibSwitch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@color/common_google_signin_btn_text_dark_default" />
+
+        <ImageButton
+            android:id="@+id/ibSpring"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@color/colorAccent" />
+
+        <ImageButton
+            android:id="@+id/ibSwitch2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@color/common_google_signin_btn_text_dark_default" />
+
+        <ImageButton
+            android:id="@+id/ibSummer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@color/colorAccent" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvOc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OCCASION" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/ibSad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@color/common_google_signin_btn_text_dark_focused" />
+
+        <ImageButton
+            android:id="@+id/ibJoy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@color/colorAccent" />
+
+        <ImageButton
+            android:id="@+id/ibTrip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@color/colorPrimaryDark" />
+
+        <ImageButton
+            android:id="@+id/ibOther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@color/common_google_signin_btn_text_dark_focused" />
+    </LinearLayout>
+
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
@@ -26,7 +135,7 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="369dp"
+        android:layout_height="match_parent"
         android:layout_below="@+id/button"
         android:scaleType="centerCrop"
         tools:layout_editor_absoluteX="9dp"
