@@ -3,4 +3,5 @@
     <item name="etRepass" type="id">etPass</item>
     <item name="fab" type="id" />
     <item name="btCamera" type="id" />
+    <item name="btAdd" type="id" />
 </resources>

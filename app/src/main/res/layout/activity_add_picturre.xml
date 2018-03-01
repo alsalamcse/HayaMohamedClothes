@@ -1,30 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.samsun81.hayamohamedclothes.AddPicturre">
+    android:orientation="vertical"
+    tools:context="com.example.samsun81.hayamohamedclothes.AddPicturre"
+    android:weightSum="1">
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add To" />
 
     <Button
         android:id="@+id/BtButton"
-        android:layout_width="105dp"
+        android:layout_width="wrap_content"
         android:layout_height="97dp"
         android:background="@android:drawable/ic_menu_camera"
         android:text="Take aPICTURE"
         tools:layout_editor_absoluteX="140dp"
-        tools:layout_editor_absoluteY="114dp" />
+        tools:layout_editor_absoluteY="16dp" />
 
     <ImageView
-        android:layout_width="124dp"
-        android:layout_height="495dp"
         android:id="@+id/imageView"
-        android:scaleType="centerCrop"
-        tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="369dp"
         android:layout_below="@+id/button"
-        />
+        android:scaleType="centerCrop"
+        tools:layout_editor_absoluteX="9dp"
+        tools:layout_editor_absoluteY="136dp" />
 
 
-
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

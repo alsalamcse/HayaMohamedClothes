@@ -13,13 +13,14 @@ public class AddPicturre extends AppCompatActivity {
 
      Button BtTake;
     ImageView imageView;
+    private Button btAdd;
     private  static  final int CAN_REQUEST=1313;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_picturre);
-
+        btAdd=(Button)findViewById(R.id.btAdd);
         BtTake=(Button) findViewById(R.id.BtButton);
         imageView=(ImageView)findViewById(R.id.imageView);
         BtTake.setOnClickListener(new btnTakePhotoClicker());
