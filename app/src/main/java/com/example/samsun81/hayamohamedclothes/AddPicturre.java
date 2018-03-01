@@ -63,6 +63,11 @@ public class AddPicturre extends AppCompatActivity {
         public void onClick(View view) {
             Intent intent=new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
             startActivityForResult(intent,CAN_REQUEST);
+
+
+
+
+            ibAutumn
         }
     }
 }
