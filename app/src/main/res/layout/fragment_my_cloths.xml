@@ -5,7 +5,14 @@
     tools:context="com.example.samsun81.hayamohamedclothes.MyClothsFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
+    <ImageSwitcher
+        android:layout_width="339dp"
+        android:layout_height="399dp"
+        android:visibility="visible" />
+
     <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="@string/hello_blank_fragment" />
