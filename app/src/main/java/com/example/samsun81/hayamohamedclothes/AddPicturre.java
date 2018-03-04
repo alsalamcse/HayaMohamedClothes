@@ -12,7 +12,9 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class AddPicturre extends AppCompatActivity {
+import com.example.samsun81.hayamohamedclothes.Data.Set;
+
+public class AddPicturre extends AppCompatActivity implements  {
 
      Button BtTake;
     ImageView imageView;
@@ -45,7 +47,16 @@ public class AddPicturre extends AppCompatActivity {
         ibJoy=(ImageButton) findViewById(R.id.ibJoy);
         ibTrip=(ImageButton) findViewById(R.id.ibTrip);
         ibOther=(ImageButton) findViewById(R.id.ibOther);
+        ibWinter.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View view) {
+                                        }
+                                    }
+        );
+
         BtTake.setOnClickListener(new btnTakePhotoClicker());
+
+
     }
 
     @Override
@@ -63,11 +74,10 @@ public class AddPicturre extends AppCompatActivity {
         public void onClick(View view) {
             Intent intent=new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
             startActivityForResult(intent,CAN_REQUEST);
-
-
-
-
-            ibAutumn
         }
+    }
+    //moving data to database
+    public void dataHandler(){
+
     }
 }
