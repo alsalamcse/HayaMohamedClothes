@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 import com.example.samsun81.hayamohamedclothes.Data.Set;
 
-public class AddPicturre extends AppCompatActivity implements  {
+public class AddPicturre extends AppCompatActivity   {
 
      Button BtTake;
     ImageView imageView;
