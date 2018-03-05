@@ -28,6 +28,8 @@ public class AddPicturre extends AppCompatActivity{
     private ImageButton ibSad,ibJoy,ibTrip,ibOther;
     private DatabaseReference databaseReference;
     private  static  final int CAN_REQUEST=1313;
+    private  String season;
+    private String occasion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +64,7 @@ public class AddPicturre extends AppCompatActivity{
                                         @Override
                                         public void onClick(View view)
                                         {
-                                            dataHandler();
+                                          season="Winter";
                                         }
                                     }
         );
@@ -72,70 +74,70 @@ public class AddPicturre extends AppCompatActivity{
             @Override
             public void onClick(View view)
             {
-                dataHandler();
+                season="Autumn";
             }
         });
 
         ibSpring.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                dataHandler();
+                season="Spring";
             }
         });
 
         ibSummer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                dataHandler();
+                season="Summer";
             }
         });
 
         ibSwitch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                dataHandler();
+                season="Winter-Autumn";
             }
         });
 
         ibSwitch1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                dataHandler();
+                season="Autumn-Spring";
             }
         });
 
         ibSwitch2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                dataHandler();
+                season="Spring-Summer";
             }
         });
 
         ibSad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                dataHandler();
+                occasion="Sad";
             }
         });
 
         ibJoy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                dataHandler();
+                occasion="Joy";
             }
         });
 
         ibTrip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                dataHandler();
+                occasion="Trip";
             }
         });
 
         ibOther.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                dataHandler();
+                occasion="Other";
             }
         });
         BtTake.setOnClickListener(new btnTakePhotoClicker());
