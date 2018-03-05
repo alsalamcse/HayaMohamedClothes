@@ -21,7 +21,11 @@
             android:name=".MyClost"
             android:label="@string/title_activity_my_clost"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".AddPicturre"></activity>
+        <activity android:name=".AddPicturre" />
+        <activity
+            android:name=".MainSwipeImgActivity"
+            android:label="@string/title_activity_main_swipe_img"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

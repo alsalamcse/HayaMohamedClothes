@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.samsun81.hayamohamedclothes.R;
@@ -29,7 +30,9 @@ public class SetAdapter extends ArrayAdapter<Set>
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
 
-        View view= LayoutInflater.from(getContext()).inflate(R.layout....,parent,false);
+        View view= LayoutInflater.from(getContext()).inflate(R.layout.set_item,parent,false);
+
+        ImageView imvSet=(ImageView) view.findViewById(R.id.imvSet);
         TextView tvName=(TextView)view.findViewById(R.id.tvName);
         TextView tvWather=(TextView)view.findViewById(R.id.tvWather);
         TextView tvOccasion=(TextView)view.findViewById(R.id.tvOccasion);

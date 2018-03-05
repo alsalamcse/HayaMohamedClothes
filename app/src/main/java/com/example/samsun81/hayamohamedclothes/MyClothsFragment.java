@@ -2,6 +2,7 @@ package com.example.samsun81.hayamohamedclothes;
 
 
 import android.content.Context;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -10,16 +11,20 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageSwitcher;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.ViewSwitcher;
+
+import com.example.samsun81.hayamohamedclothes.Data.SetAdapter;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class MyClothsFragment extends Fragment {
-    private ImageSwitcher ImSw;
-    private Button  btBack;
-    private  Button  btNex;
+    private ListView lstvCloths;
+    private SetAdapter setAdapter;
 
 
     public MyClothsFragment() {
@@ -34,38 +39,31 @@ public class MyClothsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view= inflater.inflate(R.layout.fragment_my_cloths, container, false);
-        ImSw= (ImageSwitcher)view.findViewById(R.id.ImSw);
-        btBack=(Button)view.findViewById(R.id.btBack);
-        btNex=(Button)view.findViewById(R.id.btNex);
-
-        ImSw.setFactory(new ViewSwitcher.ViewFactory() {
-
-//// TODO: imageviewww
-            @Override
-            public View makeView() {
-                ImageView imageView=new ImageView(getContext());
-                imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
-                return imageView;
-            }
-        });
-        btBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ImSw.setImageResource(R.drawable.);
-            }
-        });
-
-        btNex.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ImSw.setImageResource(R.drawable.);
-            }
-        });
-
+        lstvCloths=(ListView) view.findViewById(R.id.lstvCloths);
+        lstvCloths.setAdapter(setAdapter);
 
 
         // Inflate the layout for this fragment
-       return inflater.inflate(R.layout.fragment_my_cloths, container, false);
+        readAndListen();
+       return view;
+    }
+
+    private void readAndListen() {
+        FirebaseAuth auth=FirebaseAuth.getInstance();
+        FirebaseUser user=auth.getCurrentUser();
+        String email = user .getEmail();
+        email=email.replace('.','*');
+        //6.bulding  data reference=data path=data address
+        DatabaseReference reference;
+        reference = FirebaseDatabase.getInstance().getReference();
+
+
+
+
+
+
+
+
     }
 
 }

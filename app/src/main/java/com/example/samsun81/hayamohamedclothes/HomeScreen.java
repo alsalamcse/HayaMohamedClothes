@@ -53,7 +53,7 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
                 if(task.isSuccessful())
                 {
                     Toast.makeText(HomeScreen.this, "signIn Successful.", Toast.LENGTH_SHORT).show();
-                    Intent intent=new Intent(getBaseContext(), MyClost.class);
+                    Intent intent=new Intent(getBaseContext(),MyClost.class);
                     startActivity(intent);
                     finish();
                 }

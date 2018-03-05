@@ -1,6 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imvSet"
+            android:layout_width="match_parent"
+            android:layout_height="248dp"
+            android:layout_marginTop="11dp"
+            app:srcCompat="@android:drawable/ic_menu_report_image"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imvSet"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="Name" />
+
+        <TextView
+            android:id="@+id/tvWather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/tvName"
+            android:layout_alignRight="@+id/tvName"
+            android:layout_below="@+id/tvName"
+            android:layout_marginTop="12dp"
+            android:text="Wather" />
+
+        <TextView
+            android:id="@+id/tvOccasion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tvWather"
+            android:layout_alignStart="@+id/tvWather"
+            android:layout_below="@+id/tvWather"
+            android:layout_marginTop="15dp"
+            android:text="Occasion" />
+    </RelativeLayout>
 
 </LinearLayout>
