@@ -13,8 +13,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.samsun81.hayamohamedclothes.Data.Set;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
-public class AddPicturre extends AppCompatActivity implements  {
+public class AddPicturre extends AppCompatActivity{
 
      Button BtTake;
     ImageView imageView;
@@ -24,6 +26,7 @@ public class AddPicturre extends AppCompatActivity implements  {
     private ImageButton ibWinter,ibAutumn,ibSpring,ibSummer,ibSwitch,ibSwitch1,ibSwitch2;
     private TextView tvOc;
     private ImageButton ibSad,ibJoy,ibTrip,ibOther;
+    private DatabaseReference databaseReference;
     private  static  final int CAN_REQUEST=1313;
 
     @Override
@@ -47,16 +50,98 @@ public class AddPicturre extends AppCompatActivity implements  {
         ibJoy=(ImageButton) findViewById(R.id.ibJoy);
         ibTrip=(ImageButton) findViewById(R.id.ibTrip);
         ibOther=(ImageButton) findViewById(R.id.ibOther);
+        databaseReference= FirebaseDatabase.getInstance().getReference();
+        btAdd.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view) {
+            }
+        });
+
         ibWinter.setOnClickListener(new View.OnClickListener() {
                                         @Override
-                                        public void onClick(View view) {
+                                        public void onClick(View view)
+                                        {
+                                            dataHandler();
                                         }
                                     }
         );
 
+        ibAutumn.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                dataHandler();
+            }
+        });
+
+        ibSpring.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dataHandler();
+            }
+        });
+
+        ibSummer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dataHandler();
+            }
+        });
+
+        ibSwitch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dataHandler();
+            }
+        });
+
+        ibSwitch1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dataHandler();
+            }
+        });
+
+        ibSwitch2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dataHandler();
+            }
+        });
+
+        ibSad.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dataHandler();
+            }
+        });
+
+        ibJoy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dataHandler();
+            }
+        });
+
+        ibTrip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dataHandler();
+            }
+        });
+
+        ibOther.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dataHandler();
+            }
+        });
         BtTake.setOnClickListener(new btnTakePhotoClicker());
-
-
+    }
+    public void dataHandler(){
+        String stName=etName.getText().toString();
     }
 
     @Override
@@ -77,7 +162,4 @@ public class AddPicturre extends AppCompatActivity implements  {
         }
     }
     //moving data to database
-    public void dataHandler(){
-
-    }
 }
