@@ -37,6 +37,19 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
         auth = FirebaseAuth.getInstance();
         firebaseUser = auth.getCurrentUser();
 
+        if (firebaseUser!=null && firebaseUser.getEmail()!=null && firebaseUser.getEmail().length()>0){
+            startActivity(new Intent(this,MyClost.class));
+            finish();
+            return;
+        }
+        else {
+            String urerName=firebaseUser.getDisplayName();
+            if (firebaseUser.getPhotoUrl()!=null){
+                String photoUrl=firebaseUser.getPhotoUrl().toString();
+            }
+        }
+
+
     }
 
     private void dataHandler() {
@@ -46,25 +59,33 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
         signIn(stemail, stpassword);
     }
 
+
     private void signIn(String email, String passw) {
         auth.signInWithEmailAndPassword(email,passw).addOnCompleteListener(HomeScreen.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful())
-                {
+                if (task.isSuccessful()) {
                     Toast.makeText(HomeScreen.this, "signIn Successful.", Toast.LENGTH_SHORT).show();
-                    Intent intent=new Intent(getBaseContext(),MyClost.class);
+                    Intent intent = new Intent(getBaseContext(), MyClost.class);
                     startActivity(intent);
                     finish();
-                }
-                else
-                {
-                    Toast.makeText(HomeScreen.this, "signIn failed."+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(HomeScreen.this, "signIn failed." + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                     task.getException().printStackTrace();
                 }
+
+
+
+
             }
         });
+
+
     }
+
+
+
+
 
     @Override
     public void onClick(View view) {
