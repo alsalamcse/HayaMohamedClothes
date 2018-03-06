@@ -39,15 +39,12 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
 
         if (firebaseUser!=null && firebaseUser.getEmail()!=null && firebaseUser.getEmail().length()>0){
             startActivity(new Intent(this,MyClost.class));
+            String urerName=firebaseUser.getDisplayName();
+
             finish();
             return;
         }
-        else {
-            String urerName=firebaseUser.getDisplayName();
-            if (firebaseUser.getPhotoUrl()!=null){
-                String photoUrl=firebaseUser.getPhotoUrl().toString();
-            }
-        }
+
 
 
     }
@@ -82,7 +79,6 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
 
 
     }
-
 
 
 

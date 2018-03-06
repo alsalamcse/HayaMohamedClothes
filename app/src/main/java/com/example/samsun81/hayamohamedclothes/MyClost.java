@@ -20,6 +20,8 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class MyClost extends AppCompatActivity {
 
     /**
@@ -91,6 +93,9 @@ public class MyClost extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+
+            FirebaseAuth.getInstance().signOut();
+
             return true;
         }
 
