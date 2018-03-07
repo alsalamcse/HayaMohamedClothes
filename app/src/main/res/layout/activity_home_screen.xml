@@ -5,12 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.samsun81.hayamohamedclothes.HomeScreen">
+    tools:context="com.example.samsun81.hayamohamedclothes.HomeScreen"
+    android:weightSum="1"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </RelativeLayout>
 
     <EditText
         android:id="@+id/etEmail"
-        android:layout_width="367dp"
+        android:layout_width="match_parent"
         android:layout_height="35dp"
+        android:layout_weight="0.08"
         android:ems="10"
         android:inputType="textEmailAddress"
         tools:layout_editor_absoluteX="9dp"
@@ -18,7 +28,7 @@
 
     <EditText
         android:id="@+id/etPassword"
-        android:layout_width="368dp"
+        android:layout_width="match_parent"
         android:layout_height="51dp"
         android:ems="10"
         android:inputType="textPassword"
@@ -27,8 +37,11 @@
 
     <Button
         android:id="@+id/BtLogin"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="0.06"
+        android:background="@android:drawable/alert_light_frame"
+        android:backgroundTint="@android:color/holo_blue_dark"
         android:text="LOG IN"
         tools:layout_editor_absoluteX="148dp"
         tools:layout_editor_absoluteY="170dp"
@@ -36,8 +49,11 @@
 
     <Button
         android:id="@+id/btSignup"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="0.07"
+        android:background="@android:drawable/alert_light_frame"
+        android:backgroundTint="@android:color/holo_blue_bright"
         android:text="SignUp"
         tools:layout_editor_absoluteX="148dp"
         tools:layout_editor_absoluteY="242dp" />

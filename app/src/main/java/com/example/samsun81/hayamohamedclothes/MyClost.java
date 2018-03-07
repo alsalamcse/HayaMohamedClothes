@@ -95,7 +95,9 @@ public class MyClost extends AppCompatActivity {
         if (id == R.id.action_settings) {
 
             FirebaseAuth.getInstance().signOut();
-
+            Intent intent = new Intent(getBaseContext(), HomeScreen.class);
+            startActivity(intent);
+            finish();
             return true;
         }
 
