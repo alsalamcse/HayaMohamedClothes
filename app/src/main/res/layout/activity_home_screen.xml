@@ -51,7 +51,7 @@
         android:id="@+id/btSignup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.07"
+        android:layout_weight="0.06"
         android:background="@android:drawable/alert_light_frame"
         android:backgroundTint="@android:color/holo_blue_bright"
         android:text="SignUp"

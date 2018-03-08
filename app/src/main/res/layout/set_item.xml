@@ -14,11 +14,11 @@
             android:id="@+id/imvSet"
             android:layout_width="match_parent"
             android:layout_height="248dp"
-            android:layout_marginTop="11dp"
-            app:srcCompat="@android:drawable/ic_menu_report_image"
-            android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="11dp"
+            app:srcCompat="@android:drawable/ic_menu_report_image" />
 
         <TextView
             android:id="@+id/tvName"
@@ -33,21 +33,30 @@
             android:id="@+id/tvWather"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/tvName"
-            android:layout_alignRight="@+id/tvName"
             android:layout_below="@+id/tvName"
-            android:layout_marginTop="12dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp"
             android:text="Wather" />
 
         <TextView
             android:id="@+id/tvOccasion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/tvWather"
-            android:layout_alignStart="@+id/tvWather"
             android:layout_below="@+id/tvWather"
-            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
             android:text="Occasion" />
+
+        <Button
+            android:id="@+id/btVote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvOccasion"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="19dp"
+            android:background="@android:drawable/alert_light_frame"
+            android:backgroundTint="@android:color/holo_blue_bright"
+            android:text="Share To Vote" />
     </RelativeLayout>
 
 </LinearLayout>
