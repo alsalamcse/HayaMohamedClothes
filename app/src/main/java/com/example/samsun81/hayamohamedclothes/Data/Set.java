@@ -1,5 +1,7 @@
 package com.example.samsun81.hayamohamedclothes.Data;
 
+import android.widget.Button;
+
 /**
  * Created by user on 01/03/2018.
  */
@@ -12,17 +14,20 @@ public class Set {
     private String occasion;
     private String imgPath;
     private String KeyId;
+    private Button btVote;
 
 
-    public Set(String name, String wather) {
+    public Set(String name, String wather,String occasion) {
         this.name = name;
         this.wather = wather;
+        this.occasion=occasion;
         imgPath = null;
     }
 
-    public Set(String name, String wather, String imgPath, String keyId) {
+    public Set(String name, String wather,String occasion, String imgPath, String keyId) {
         this.name = name;
         this.wather = wather;
+        this.occasion=occasion;
         this.imgPath = imgPath;
         this.KeyId = keyId;
     }
