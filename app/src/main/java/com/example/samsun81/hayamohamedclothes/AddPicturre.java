@@ -127,7 +127,6 @@ public class AddPicturre extends AppCompatActivity {
                 occasion = "Other";
             }
         });
-
         btAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -175,7 +174,7 @@ public class AddPicturre extends AppCompatActivity {
         }
     }
 
-    class btnTakePhotoClicker implements Button.OnClickListener {
+    class btnTakePhotoClicker implements Button.OnClickListener  {
         @Override
         public void onClick(View view) {
             Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
