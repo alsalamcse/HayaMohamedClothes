@@ -1,4 +1,4 @@
-package com.example.samsun81.hayamohamedclothes;
+package com.example.samsun81.hayamohamedclothes.myfragments;
 
 
 import android.content.Context;
@@ -17,6 +17,7 @@ import android.widget.ViewSwitcher;
 
 import com.example.samsun81.hayamohamedclothes.Data.Set;
 import com.example.samsun81.hayamohamedclothes.Data.SetAdapter;
+import com.example.samsun81.hayamohamedclothes.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -47,6 +48,7 @@ public class MyClothsFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view= inflater.inflate(R.layout.fragment_my_cloths, container, false);
         lstvCloths=(ListView) view.findViewById(R.id.lstvCloths);
+        setAdapter=new SetAdapter(getContext(),R.layout.set_item);
         lstvCloths.setAdapter(setAdapter);
 
 
@@ -64,7 +66,7 @@ public class MyClothsFragment extends Fragment {
 
         DatabaseReference reference;
         reference= FirebaseDatabase.getInstance().getReference();
-        reference.child(email).child("myList").addValueEventListener(new ValueEventListener() {
+        reference.child(email).child("mySet").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                  setAdapter.clear();

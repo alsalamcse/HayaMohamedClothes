@@ -1,6 +1,9 @@
 package com.example.samsun81.hayamohamedclothes.Data;
 
+import android.net.Uri;
 import android.widget.Button;
+
+import java.net.URI;
 
 /**
  * Created by user on 01/03/2018.

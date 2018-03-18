@@ -51,13 +51,12 @@
             android:id="@+id/btVote"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginBottom="19dp"
             android:background="@android:drawable/alert_light_frame"
             android:backgroundTint="@android:color/holo_blue_bright"
-            android:text="Share To Vote" />
+            android:text="Share To Vote"
+            android:layout_below="@+id/tvOccasion"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
         <TextView
             android:id="@+id/textView"

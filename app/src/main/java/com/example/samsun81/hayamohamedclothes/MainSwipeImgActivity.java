@@ -54,7 +54,6 @@ public class MainSwipeImgActivity extends AppCompatActivity {
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
-        setAdapter=new SetAdapter(getApplicationContext(),R.layout.set_item);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
