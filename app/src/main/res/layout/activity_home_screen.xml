@@ -10,17 +10,17 @@
     >
 
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="236dp"
+        app:srcCompat="@mipmap/ic_launcher" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
     </RelativeLayout>
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="match_parent"
-        android:layout_height="233dp"
-        app:srcCompat="@mipmap/logo" />
 
     <EditText
         android:id="@+id/etEmail"
@@ -47,23 +47,23 @@
         android:id="@+id/BtLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.14"
         android:background="@android:drawable/alert_light_frame"
         android:backgroundTint="@android:color/holo_blue_dark"
         android:text="LOG IN"
         tools:layout_editor_absoluteX="148dp"
         tools:layout_editor_absoluteY="170dp"
-        tools:text="LOG IN" />
+        tools:text="LOG IN"
+        android:layout_weight="0.17" />
 
     <Button
         android:id="@+id/btSignup"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:background="@android:drawable/alert_light_frame"
         android:backgroundTint="@android:color/holo_blue_bright"
         android:text="SignUp"
         tools:layout_editor_absoluteX="148dp"
         tools:layout_editor_absoluteY="242dp"
-        android:layout_weight="0.16" />
+        android:layout_weight="0.29" />
 
 </LinearLayout>
