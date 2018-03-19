@@ -30,7 +30,7 @@ import com.google.firebase.database.ValueEventListener;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MyClothsFragment extends Fragment {
+public class MyClothsFragment extends Fragment implements View.OnClickListener {
     private ListView lstvCloths;
     private SetAdapter setAdapter;
 
@@ -66,6 +66,7 @@ public class MyClothsFragment extends Fragment {
 
         DatabaseReference reference;
         reference= FirebaseDatabase.getInstance().getReference();
+
         reference.child(email).child("mySet").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -73,6 +74,7 @@ public class MyClothsFragment extends Fragment {
                 for (DataSnapshot ds :dataSnapshot.getChildren()) {
                     Set s= ds.getValue(Set.class);
                     Log.d("ST",s.toString());
+
                     setAdapter.add(s);
                 }
             }
@@ -86,4 +88,9 @@ public class MyClothsFragment extends Fragment {
 
     }
 
+    @Override
+    public void onClick(View view) {
+        int id=view.getId();
+        switch (id){
+            case R.id.ad_image_view : { }
 }

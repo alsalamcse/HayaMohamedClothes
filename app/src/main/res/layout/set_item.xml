@@ -51,12 +51,11 @@
             android:id="@+id/btVote"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tvOccasion"
             android:background="@android:drawable/alert_light_frame"
             android:backgroundTint="@android:color/holo_blue_bright"
-            android:text="Share To Vote"
-            android:layout_below="@+id/tvOccasion"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:text="Share To Vote" />
 
         <TextView
             android:id="@+id/textView"
@@ -67,8 +66,7 @@
             android:layout_below="@+id/tvOccasion"
             android:layout_marginLeft="14dp"
             android:layout_marginStart="14dp"
-            android:layout_marginTop="46dp"
-            android:text="YES :" />
+            android:layout_marginTop="46dp" />
 
         <TextView
             android:id="@+id/textView2"
@@ -76,30 +74,41 @@
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/textView"
             android:layout_toEndOf="@+id/tvName"
-            android:layout_toRightOf="@+id/tvName"
-            android:text="NO :" />
+            android:layout_toRightOf="@+id/tvName" />
 
-        <TextView
-            android:id="@+id/textView3"
+        <ImageView
+            android:id="@+id/imageView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/textView"
-            android:layout_marginLeft="15dp"
-            android:layout_marginStart="15dp"
-            android:layout_toEndOf="@+id/textView"
-            android:layout_toRightOf="@+id/textView"
+            android:layout_below="@+id/textView"
+            android:layout_marginStart="36dp"
+            app:srcCompat="@mipmap/like"
+            android:layout_above="@+id/tvNo" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/no"
+            android:layout_marginStart="23dp"
+            android:layout_below="@+id/textView2"
+            android:layout_toEndOf="@+id/tvOccasion" />
+
+        <TextView
+            android:id="@+id/tvYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/imageView8"
+            android:layout_below="@+id/imageView8"
             android:text="0" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/tvNo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/textView2"
-            android:layout_marginLeft="11dp"
-            android:layout_marginStart="11dp"
-            android:layout_toEndOf="@+id/textView2"
-            android:layout_toRightOf="@+id/textView2"
-            android:text="0" />
+            android:text="0"
+            android:layout_below="@+id/imageView9"
+            android:layout_alignStart="@+id/imageView9" />
 
     </RelativeLayout>
 

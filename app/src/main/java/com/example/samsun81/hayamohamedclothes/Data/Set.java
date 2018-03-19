@@ -17,7 +17,10 @@ public class Set {
     private String occasion;
     private String imgPath;
     private String KeyId;
-    private Button btVote;
+    private  boolean toVove=false;
+    private int like;
+    private int dilike;
+    private String email;
 
 
     public Set(String name, String wather,String occasion) {
@@ -27,12 +30,40 @@ public class Set {
         imgPath = null;
     }
 
-    public Set(String name, String wather,String occasion, String imgPath, String keyId) {
+    public int getLike() {
+        return like;
+    }
+
+    public void setLike(int like) {
+        this.like = like;
+    }
+
+    public int getDilike() {
+        return dilike;
+    }
+
+    public void setDilike(int dilike) {
+        this.dilike = dilike;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Set(String name, String wather, String occasion, String imgPath, String keyId, int like, int dilike, String email) {
         this.name = name;
         this.wather = wather;
         this.occasion=occasion;
         this.imgPath = imgPath;
         this.KeyId = keyId;
+        this.like=like;
+        this.dilike=dilike;
+        this.email=email;
+
     }
 
 
