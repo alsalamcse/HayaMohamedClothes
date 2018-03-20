@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imVote"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="209dp"
+                android:layout_toEndOf="@+id/btDislike"
+                app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+            <ImageButton
+                android:id="@+id/btDislike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="19dp"
+                app:srcCompat="@mipmap/dislike"
+                android:layout_below="@+id/btLike"
+                android:layout_alignParentStart="true" />
+
+            <ImageButton
+                android:id="@+id/btLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/btDislike"
+                android:layout_marginTop="81dp"
+                app:srcCompat="@mipmap/like" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

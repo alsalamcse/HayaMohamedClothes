@@ -5,4 +5,5 @@
     <item name="btCamera" type="id" />
     <item name="btAdd" type="id" />
     <item name="ImSw" type="id" />
+    <item name="listVoteView" type="id" />
 </resources>

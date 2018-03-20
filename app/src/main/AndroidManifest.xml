@@ -29,7 +29,7 @@
             android:name=".MainSwipeImgActivity"
             android:label="@string/title_activity_main_swipe_img"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Data.voteAdapter"></activity>
+        <activity android:name=".Data.VoteAdapter"></activity>
     </application>
 
 </manifest>

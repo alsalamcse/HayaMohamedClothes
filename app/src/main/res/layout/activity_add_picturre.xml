@@ -14,123 +14,171 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="NAME"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tvTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Time of the year" />
+        android:text="Time of the year"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/ibWinter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/ibSwitch"
+            app:srcCompat="@mipmap/winter" />
+
+        <ImageButton
+            android:id="@+id/ibSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/ibAutumn"
+            app:srcCompat="@mipmap/nextt" />
+
+        <ImageButton
+            android:id="@+id/ibAutumn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@mipmap/authem" />
+
+        <ImageButton
+            android:id="@+id/ibSwitch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/ibSpring"
+            app:srcCompat="@mipmap/nextt" />
+
+        <ImageButton
+            android:id="@+id/ibSpring"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="11dp"
+            app:srcCompat="@mipmap/spring" />
+
+        <ImageButton
+            android:id="@+id/ibSwitch2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/nextt"
+            android:layout_marginStart="29dp"
+            android:layout_below="@+id/ibSwitch"
+            android:layout_toEndOf="@+id/ibWinter" />
+
+        <ImageButton
+            android:id="@+id/imageButton8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/summer"
+            android:layout_below="@+id/ibAutumn"
+            android:layout_toEndOf="@+id/ibSwitch2" />
+
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <ImageButton
-            android:id="@+id/ibWinter"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            app:srcCompat="@color/common_google_signin_btn_text_light_disabled" />
-
-        <ImageButton
-            android:id="@+id/ibSwitch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@color/common_google_signin_btn_text_dark_default" />
-
-        <ImageButton
-            android:id="@+id/ibAutumn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@color/common_google_signin_btn_text_light_default" />
-
-        <ImageButton
-            android:id="@+id/ibSwitch1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@color/common_google_signin_btn_text_dark_default" />
-
-        <ImageButton
-            android:id="@+id/ibSpring"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@color/colorAccent" />
-
-        <ImageButton
-            android:id="@+id/ibSwitch2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@color/common_google_signin_btn_text_dark_default" />
-
-        <ImageButton
-            android:id="@+id/ibSummer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@color/colorAccent" />
     </LinearLayout>
 
     <TextView
         android:id="@+id/tvOc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="OCCASION" />
+        android:text="OCCASION"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <ImageButton
-            android:id="@+id/ibSad"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@color/common_google_signin_btn_text_dark_focused" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
-        <ImageButton
-            android:id="@+id/ibJoy"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@color/colorAccent" />
+            <ImageButton
+                android:id="@+id/ibJoy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@mipmap/happy"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@+id/imageButton10" />
 
-        <ImageButton
-            android:id="@+id/ibTrip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@color/colorPrimaryDark" />
+            <ImageButton
+                android:id="@+id/imageButton10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@mipmap/sad"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@+id/ibTrip" />
 
-        <ImageButton
-            android:id="@+id/ibOther"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@color/common_google_signin_btn_text_dark_focused" />
+            <ImageButton
+                android:id="@+id/ibTrip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@mipmap/trip"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@+id/ibOther" />
+
+            <ImageButton
+                android:id="@+id/ibOther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@mipmap/other"
+                android:layout_marginEnd="33dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/BtButton"
+                    android:layout_width="227dp"
+                    android:layout_height="142dp"
+
+                    android:src="@android:drawable/ic_menu_camera"
+                    tools:layout_editor_absoluteX="140dp"
+                    tools:layout_editor_absoluteY="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+
+                <Button
+                    android:id="@+id/btAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/BtButton"
+                    android:layout_centerHorizontal="true"
+                    android:background="?attr/colorAccent"
+                    android:text="Add"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+            </RelativeLayout>
+        </RelativeLayout>
+
     </LinearLayout>
-
-    <Button
-        android:id="@+id/btAdd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add" />
-
-    <ImageButton
-        android:id="@+id/BtButton"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@android:drawable/ic_menu_camera"
-
-        tools:layout_editor_absoluteX="140dp"
-        tools:layout_editor_absoluteY="16dp" />
 
     <ImageView
         android:id="@+id/imageView"

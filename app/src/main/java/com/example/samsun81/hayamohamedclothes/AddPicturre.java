@@ -211,7 +211,10 @@ public class AddPicturre extends AppCompatActivity {
 
         DatabaseReference reference;
         reference=FirebaseDatabase.getInstance().getReference();
-        reference.child(email).child("mySet").push().setValue(s).addOnCompleteListener(this, new OnCompleteListener<Void>() {
+        String id=   reference.child(email).child("mySet").push().getKey();
+        s.setKeyId(id);
+        s.setEmail(email);
+        reference.child(email).child("mySet").child(id).setValue(s).addOnCompleteListener(this, new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()){

@@ -46,34 +46,34 @@ public class MyClothsFragment extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view= inflater.inflate(R.layout.fragment_my_cloths, container, false);
-        lstvCloths=(ListView) view.findViewById(R.id.lstvCloths);
-        setAdapter=new SetAdapter(getContext(),R.layout.set_item);
+        View view = inflater.inflate(R.layout.fragment_my_cloths, container, false);
+        lstvCloths = (ListView) view.findViewById(R.id.lstvCloths);
+        setAdapter = new SetAdapter(getContext(), R.layout.set_item);
         lstvCloths.setAdapter(setAdapter);
 
 
         // Inflate the layout for this fragment
         readAndListen();
-       return view;
+        return view;
     }
 
     private void readAndListen() {
-        FirebaseAuth auth=FirebaseAuth.getInstance();
-        FirebaseUser user=auth.getCurrentUser();
-        String email = user .getEmail();
-        email=email.replace('.','*');
+        FirebaseAuth auth = FirebaseAuth.getInstance();
+        FirebaseUser user = auth.getCurrentUser();
+        String email = user.getEmail();
+        email = email.replace('.', '*');
         //6.bulding  data reference=data path=data address
 
         DatabaseReference reference;
-        reference= FirebaseDatabase.getInstance().getReference();
+        reference = FirebaseDatabase.getInstance().getReference();
 
         reference.child(email).child("mySet").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                 setAdapter.clear();
-                for (DataSnapshot ds :dataSnapshot.getChildren()) {
-                    Set s= ds.getValue(Set.class);
-                    Log.d("ST",s.toString());
+                setAdapter.clear();
+                for (DataSnapshot ds : dataSnapshot.getChildren()) {
+                    Set s = ds.getValue(Set.class);
+                    Log.d("ST", s.toString());
 
                     setAdapter.add(s);
                 }
@@ -90,7 +90,10 @@ public class MyClothsFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-        int id=view.getId();
-        switch (id){
-            case R.id.ad_image_view : { }
+        int id = view.getId();
+        switch (id) {
+            case R.id.ad_image_view: {
+            }
+        }
+    }
 }
