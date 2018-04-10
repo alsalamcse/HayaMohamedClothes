@@ -204,9 +204,11 @@ public class AddPicturre extends AppCompatActivity {
         s.setOccasion(occasion);
         s.setWather(season);
         s.setImgPath(imgname);
+
         FirebaseAuth auth=FirebaseAuth.getInstance();
         FirebaseUser user=auth.getCurrentUser();
         String email=user.getEmail();
+        s.setEmail(email);
         email=email.replace('.','*');
 
         DatabaseReference reference;
@@ -214,7 +216,7 @@ public class AddPicturre extends AppCompatActivity {
         String id=   reference.child(email).child("mySet").push().getKey();
         s.setKeyId(id);
         s.setEmail(email);
-        reference.child(email).child("mySet").child(id).setValue(s).addOnCompleteListener(this, new OnCompleteListener<Void>() {
+        reference.child("SetList").child(id).setValue(s).addOnCompleteListener(this, new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()){

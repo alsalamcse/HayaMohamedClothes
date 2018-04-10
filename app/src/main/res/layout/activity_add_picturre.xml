@@ -82,29 +82,14 @@
             android:layout_toEndOf="@+id/ibWinter" />
 
         <ImageButton
-            android:id="@+id/imageButton8"
+            android:id="@+id/ibSummer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@mipmap/summer"
             android:layout_below="@+id/ibAutumn"
-            android:layout_toEndOf="@+id/ibSwitch2" />
+            android:layout_toEndOf="@+id/ibSwitch2"
+            app:srcCompat="@mipmap/summer" />
 
     </RelativeLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/tvOc"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="OCCASION"
-        android:textColor="@color/colorAccent"
-        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -120,38 +105,40 @@
                 android:id="@+id/ibJoy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@mipmap/happy"
                 android:layout_alignParentTop="true"
-                android:layout_toStartOf="@+id/imageButton10" />
+                android:layout_toStartOf="@+id/ibSad"
+                app:srcCompat="@mipmap/happy" />
 
             <ImageButton
-                android:id="@+id/imageButton10"
+                android:id="@+id/ibSad"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@mipmap/sad"
                 android:layout_alignParentTop="true"
-                android:layout_toStartOf="@+id/ibTrip" />
+                android:layout_toStartOf="@+id/ibTrip"
+                app:srcCompat="@mipmap/sad" />
 
             <ImageButton
                 android:id="@+id/ibTrip"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@mipmap/trip"
                 android:layout_alignParentTop="true"
-                android:layout_toStartOf="@+id/ibOther" />
+                android:layout_toStartOf="@+id/ibOther"
+                app:srcCompat="@mipmap/trip" />
 
             <ImageButton
                 android:id="@+id/ibOther"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@mipmap/other"
-                android:layout_marginEnd="33dp"
+                android:layout_alignParentEnd="true"
                 android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true" />
+                android:layout_marginEnd="33dp"
+                app:srcCompat="@mipmap/other" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true">
 
                 <ImageButton
                     android:id="@+id/BtButton"
@@ -179,6 +166,21 @@
         </RelativeLayout>
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvOc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OCCASION"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/imageView"

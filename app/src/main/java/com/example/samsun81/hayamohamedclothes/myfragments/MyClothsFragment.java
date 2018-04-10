@@ -67,7 +67,7 @@ public class MyClothsFragment extends Fragment implements View.OnClickListener {
         DatabaseReference reference;
         reference = FirebaseDatabase.getInstance().getReference();
 
-        reference.child(email).child("mySet").addValueEventListener(new ValueEventListener() {
+        reference.child("SetList").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 setAdapter.clear();
@@ -91,9 +91,6 @@ public class MyClothsFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View view) {
         int id = view.getId();
-        switch (id) {
-            case R.id.ad_image_view: {
-            }
-        }
+
     }
 }

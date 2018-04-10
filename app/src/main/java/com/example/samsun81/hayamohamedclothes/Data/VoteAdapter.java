@@ -25,7 +25,6 @@ import com.google.firebase.storage.StorageReference;
 public class VoteAdapter extends ArrayAdapter<Set> {
 
 
-
     public VoteAdapter(@NonNull Context context, @LayoutRes int resource) {
         super(context, resource);
     }
@@ -37,26 +36,25 @@ public class VoteAdapter extends ArrayAdapter<Set> {
         View view = LayoutInflater.from(getContext()).inflate(R.layout.vot_item, parent, false);
 
 
-        ImageView imVote=(ImageView) view.findViewById(R.id.imVote);
-        ImageButton btLike=(ImageButton) view.findViewById((R.id.btLike));
-        ImageButton btDislike=(ImageButton) view.findViewById((R.id.btDislike));
-        final Set s=getItem(position);
+        ImageView imVote = (ImageView) view.findViewById(R.id.imVote);
+        ImageButton btLike = (ImageButton) view.findViewById((R.id.btLike));
+        ImageButton btDislike = (ImageButton) view.findViewById((R.id.btDislike));
 
-        btLike .setOnClickListener(new View.OnClickListener() {
+        final Set s = getItem(position);
+
+        btLike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                s.setLike(s.getLike()+1);
+                s.setLike(s.getLike() + 1); // TODO                // lazem a3rf lmen tabe3 leno lazm a3rf wen drg3ha
                 DatabaseReference reference;
-                reference= FirebaseDatabase.getInstance().getReference();
+                reference = FirebaseDatabase.getInstance().getReference();
 
                 reference.child("mySet").child(s.getKeyId()).setValue(s).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
-                        if(task.isSuccessful())
-                        {
+                        if (task.isSuccessful()) {
                             Toast.makeText(getContext(), " Like is Done", Toast.LENGTH_SHORT).show();
-                        }else
-                        {
+                        } else {
                             Toast.makeText(getContext(), " Like Failed", Toast.LENGTH_SHORT).show();
 
                         }
@@ -67,29 +65,26 @@ public class VoteAdapter extends ArrayAdapter<Set> {
         btDislike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                s.setDilike(s.getDilike()+1);
+                s.setDilike(s.getDilike() + 1);
                 DatabaseReference reference;
-                reference= FirebaseDatabase.getInstance().getReference();
+                reference = FirebaseDatabase.getInstance().getReference();
                 reference.child("mySet").child(s.getKeyId()).setValue(s).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
-                        if(task.isSuccessful())
-                        {
+                        if (task.isSuccessful()) {
                             Toast.makeText(getContext(), " Disike is Done", Toast.LENGTH_SHORT).show();
-                        }else{
+                        } else {
                             Toast.makeText(getContext(), "Disike  Failed", Toast.LENGTH_SHORT).show();
 
 
-
                         }
-        });
+                    }
 
 
-
-
-
-}
+                });
             }
-        }
+        });
+        return  view;
+
     }
 }

@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,11 +35,13 @@ import static com.example.samsun81.hayamohamedclothes.R.id.imageView;
  * Created by user on 01/03/2018.
  */
 
-public class SetAdapter extends ArrayAdapter<Set>
+public class SetAdapter extends ArrayAdapter<Set> implements View.OnClickListener
 {
 
     FirebaseStorage storage;
     StorageReference storageReference;
+    Button btVote;
+
 
         public SetAdapter(@NonNull Context context, @LayoutRes int resource) {
         super(context, resource);
@@ -53,10 +56,12 @@ public class SetAdapter extends ArrayAdapter<Set>
 
         View view= LayoutInflater.from(getContext()).inflate(R.layout.set_item,parent,false);
 
+
         ImageView imvSet=(ImageView) view.findViewById(R.id.imvSet);
         TextView tvName=(TextView)view.findViewById(R.id.tvName);
         TextView tvWather=(TextView)view.findViewById(R.id.tvWather);
         TextView tvOccasion=(TextView)view.findViewById(R.id.tvOccasion);
+        Button btVote=(Button) view.findViewById(R.id.btVote);
 
 
 
@@ -145,5 +150,16 @@ public class SetAdapter extends ArrayAdapter<Set>
         }
     }
 
+
+    public void dataHandler(){
+
+    }
+
+
+    @Override
+    public void onClick(View view) {
+        if (view==btVote);
+        // A3ML DALA BTNKOL ALSORA
+    }
 }
 
