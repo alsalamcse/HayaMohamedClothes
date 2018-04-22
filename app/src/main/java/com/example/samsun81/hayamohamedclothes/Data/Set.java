@@ -1,10 +1,5 @@
 package com.example.samsun81.hayamohamedclothes.Data;
 
-import android.net.Uri;
-import android.widget.Button;
-
-import java.net.URI;
-
 /**
  * Created by user on 01/03/2018.
  */
@@ -17,9 +12,9 @@ public class Set {
     private String occasion;
     private String imgPath;
     private String KeyId;
-    private  boolean toVove=false;
+    private  boolean toVote=false;
     private int like;
-    private int dilike;
+    private int dislike;
     private String email;
 
 
@@ -30,6 +25,21 @@ public class Set {
         imgPath = null;
     }
 
+    public Set() {
+
+
+    }
+    public Set(String name, String wather, String occasion, String imgPath, String keyId, int like, int dislike, String email) {
+        this.name = name;
+        this.wather = wather;
+        this.occasion=occasion;
+        this.imgPath = imgPath;
+        this.KeyId = keyId;
+        this.like=like;
+        this.dislike = dislike;
+        this.email=email;
+
+    }
     public int getLike() {
         return like;
     }
@@ -38,12 +48,12 @@ public class Set {
         this.like = like;
     }
 
-    public int getDilike() {
-        return dilike;
+    public int getDislike() {
+        return dislike;
     }
 
-    public void setDilike(int dilike) {
-        this.dilike = dilike;
+    public void setDislike(int dislike) {
+        this.dislike = dislike;
     }
 
     public String getEmail() {
@@ -54,17 +64,7 @@ public class Set {
         this.email = email;
     }
 
-    public Set(String name, String wather, String occasion, String imgPath, String keyId, int like, int dilike, String email) {
-        this.name = name;
-        this.wather = wather;
-        this.occasion=occasion;
-        this.imgPath = imgPath;
-        this.KeyId = keyId;
-        this.like=like;
-        this.dilike=dilike;
-        this.email=email;
 
-    }
 
 
     public String getName() {
@@ -107,10 +107,11 @@ public class Set {
         KeyId = keyId;
     }
 
-    public Set() {
-
-
+    public void setToVote(boolean toVote) {
+        this.toVote = toVote;
     }
 
-
+    public boolean isToVote() {
+        return toVote;
+    }
 }

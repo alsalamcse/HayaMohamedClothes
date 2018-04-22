@@ -204,7 +204,7 @@ public class AddPicturre extends AppCompatActivity {
         s.setOccasion(occasion);
         s.setWather(season);
         s.setImgPath(imgname);
-
+        s.setToVote(false);
         FirebaseAuth auth=FirebaseAuth.getInstance();
         FirebaseUser user=auth.getCurrentUser();
         String email=user.getEmail();

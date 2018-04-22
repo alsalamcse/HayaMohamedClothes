@@ -18,8 +18,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.samsun81.hayamohamedclothes.R;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FileDownloadTask;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
@@ -65,9 +69,34 @@ public class SetAdapter extends ArrayAdapter<Set> implements View.OnClickListene
 
 
 
-        Set s=getItem(position);
+        final Set s=getItem(position);
+        if(s.isToVote())
+            btVote.setText("UnShare");
+        else
+            btVote.setText("Share To Vote");
         StorageReference ref = storageReference.child("images/"+s.getImgPath());
+        btVote.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                s.setToVote(!s.isToVote());
 
+                //to udate rhe data at the firebase
+                DatabaseReference reference;
+                reference = FirebaseDatabase.getInstance().getReference();
+
+                reference.child("SetList").child(s.getKeyId()).setValue(s).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()) {
+                         Toast.makeText(getContext(), "DONE", Toast.LENGTH_SHORT).show();
+                        } else {
+                          //  Toast.makeText(getContext(), " Like Failed", Toast.LENGTH_SHORT).show();
+
+                        }
+                    }
+                });
+            }
+        });
         downloadInMemory(ref,imvSet);
         tvName.setText(s.getName());
         tvWather.setText(s.getWather());
@@ -159,7 +188,7 @@ public class SetAdapter extends ArrayAdapter<Set> implements View.OnClickListene
     @Override
     public void onClick(View view) {
         if (view==btVote);
-        // A3ML DALA BTNKOL ALSORA
+        // A3ML DALA BTNKOL ALSORA+ 3dd alaswat
     }
 }
 

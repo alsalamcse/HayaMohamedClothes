@@ -67,7 +67,7 @@ public class MyClothsFragment extends Fragment implements View.OnClickListener {
         DatabaseReference reference;
         reference = FirebaseDatabase.getInstance().getReference();
 
-        reference.child("SetList").addValueEventListener(new ValueEventListener() {
+        reference.child("SetList").orderByChild("email").equalTo(email).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 setAdapter.clear();

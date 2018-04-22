@@ -80,34 +80,34 @@
             android:id="@+id/imageView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_above="@+id/tvNo"
             android:layout_below="@+id/textView"
             android:layout_marginStart="36dp"
-            app:srcCompat="@mipmap/like"
-            android:layout_above="@+id/tvNo" />
+            app:srcCompat="@mipmap/like" />
 
         <ImageView
             android:id="@+id/imageView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@mipmap/no"
-            android:layout_marginStart="23dp"
             android:layout_below="@+id/textView2"
-            android:layout_toEndOf="@+id/tvOccasion" />
+            android:layout_marginStart="39dp"
+            android:layout_toEndOf="@+id/tvOccasion"
+            app:srcCompat="@mipmap/no" />
 
         <TextView
             android:id="@+id/tvYes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/imageView8"
             android:layout_below="@+id/imageView8"
-            android:text="0" />
+            android:text="0"
+            android:layout_alignStart="@+id/imageView8" />
 
         <TextView
             android:id="@+id/tvNo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0"
             android:layout_below="@+id/imageView9"
+            android:text="0"
             android:layout_alignStart="@+id/imageView9" />
 
     </RelativeLayout>
