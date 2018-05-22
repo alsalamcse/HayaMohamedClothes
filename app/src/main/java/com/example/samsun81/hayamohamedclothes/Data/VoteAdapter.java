@@ -16,11 +16,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.samsun81.hayamohamedclothes.AddPicturre;
 import com.example.samsun81.hayamohamedclothes.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FileDownloadTask;
@@ -30,6 +33,7 @@ import com.google.firebase.storage.StorageReference;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.concurrent.Executor;
 
 public class VoteAdapter extends ArrayAdapter<Set> {
     private TextView tvYes;
@@ -76,6 +80,7 @@ public class VoteAdapter extends ArrayAdapter<Set> {
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(getContext(), " Like is Done", Toast.LENGTH_SHORT).show();
+                            updateVote(s,true);
                         } else {
                             Toast.makeText(getContext(), " Like Failed", Toast.LENGTH_SHORT).show();
 
@@ -95,6 +100,7 @@ public class VoteAdapter extends ArrayAdapter<Set> {
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(getContext(), " Disike is Done", Toast.LENGTH_SHORT).show();
+                            updateVote(s,false);
                         } else {
                             Toast.makeText(getContext(), "Disike  Failed", Toast.LENGTH_SHORT).show();
 
@@ -177,5 +183,26 @@ public class VoteAdapter extends ArrayAdapter<Set> {
         } else {
             Toast.makeText(getContext(), "Upload file before downloading", Toast.LENGTH_LONG).show();
         }
+    }
+    private void updateVote(Set s, boolean type){
+        FirebaseAuth auth=FirebaseAuth.getInstance();
+        FirebaseUser user=auth.getCurrentUser();
+        String email=user.getEmail();
+        s.setEmail(email);
+        email=email.replace('.','*');
+
+        DatabaseReference reference;
+        reference=FirebaseDatabase.getInstance().getReference();
+        reference.child(email).child(s.getKeyId()).setValue(type).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if (task.isSuccessful()){
+                    Toast.makeText(getContext(),"updateVote Successful",Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(getContext(), "updateVote Failed",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 }
