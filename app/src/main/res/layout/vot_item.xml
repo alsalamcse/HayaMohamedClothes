@@ -14,10 +14,10 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/tvNo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/textView3"
+                android:layout_alignStart="@+id/tvYes"
                 android:layout_below="@+id/btLike"
                 android:layout_marginEnd="10dp"
                 android:layout_marginTop="13dp"
@@ -28,7 +28,7 @@
                 android:textStyle="bold|italic" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/tvYes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -62,7 +62,7 @@
                 android:id="@+id/btLike"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView3"
+                android:layout_below="@+id/tvYes"
                 android:layout_toStartOf="@+id/imVote"
                 app:srcCompat="@mipmap/like" />
 

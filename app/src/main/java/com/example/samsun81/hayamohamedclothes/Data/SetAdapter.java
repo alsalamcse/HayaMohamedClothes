@@ -45,7 +45,8 @@ public class SetAdapter extends ArrayAdapter<Set> implements View.OnClickListene
     FirebaseStorage storage;
     StorageReference storageReference;
     Button btVote;
-
+    private TextView tvYes;
+    private TextView tvNo;
 
         public SetAdapter(@NonNull Context context, @LayoutRes int resource) {
         super(context, resource);
@@ -66,6 +67,8 @@ public class SetAdapter extends ArrayAdapter<Set> implements View.OnClickListene
         TextView tvWather=(TextView)view.findViewById(R.id.tvWather);
         TextView tvOccasion=(TextView)view.findViewById(R.id.tvOccasion);
         Button btVote=(Button) view.findViewById(R.id.btVote);
+        TextView tvYes=(TextView) view.findViewById(R.id.tvYes);
+        TextView tvNo = (TextView) view.findViewById(R.id.tvNo);
 
 
 
@@ -74,6 +77,10 @@ public class SetAdapter extends ArrayAdapter<Set> implements View.OnClickListene
             btVote.setText("UnShare");
         else
             btVote.setText("Share To Vote");
+
+        tvYes.setText(s.getLike()+"");
+        tvNo.setText(s.getDislike()+"");
+
         StorageReference ref = storageReference.child("images/"+s.getImgPath());
         btVote.setOnClickListener(new View.OnClickListener() {
             @Override

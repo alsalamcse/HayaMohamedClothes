@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.samsun81.hayamohamedclothes.Data.Set;
 import com.example.samsun81.hayamohamedclothes.Data.SetAdapter;
@@ -30,6 +31,7 @@ public class VoteFragment extends Fragment {
     private VoteAdapter voteAdapter;
 
 
+
     public VoteFragment() {
         // Required empty public constructor
     }
@@ -43,6 +45,7 @@ public class VoteFragment extends Fragment {
         listVoteView=(ListView) view.findViewById(R.id.lstvVote);
         voteAdapter = new VoteAdapter(getContext(),R.layout.vot_item);
         listVoteView.setAdapter(voteAdapter);
+
         // Inflate the layout for this fragment
         readAndListen();
         return view;
@@ -52,7 +55,6 @@ public class VoteFragment extends Fragment {
 
 //        FirebaseAuth auth= FirebaseAuth.getInstance();
 //        FirebaseUser user=auth.getCurrentUser();
-
 
 
         DatabaseReference reference;

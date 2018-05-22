@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.samsun81.hayamohamedclothes.R;
@@ -31,10 +32,11 @@ import java.io.File;
 import java.io.IOException;
 
 public class VoteAdapter extends ArrayAdapter<Set> {
+    private TextView tvYes;
+    private TextView tvNo;
 
     FirebaseStorage storage;
     StorageReference storageReference;
-
     public VoteAdapter(@NonNull Context context, @LayoutRes int resource) {
         super(context, resource);
         storage = FirebaseStorage.getInstance();
@@ -51,11 +53,15 @@ public class VoteAdapter extends ArrayAdapter<Set> {
         ImageView imVote = (ImageView) view.findViewById(R.id.imVote);
         ImageButton btLike = (ImageButton) view.findViewById((R.id.btLike));
         ImageButton btDislike = (ImageButton) view.findViewById((R.id.btDislike));
+        TextView tvYes=(TextView) view.findViewById(R.id.tvYes);
+        TextView tvNo = (TextView) view.findViewById(R.id.tvNo);
+
 
         final Set s=getItem(position);
         StorageReference ref = storageReference.child("images/"+s.getImgPath());
         downloadInMemory(ref,imVote);
-
+        tvYes.setText(s.getLike()+"");
+        tvNo.setText(s.getDislike()+"");
 
 
         btLike.setOnClickListener(new View.OnClickListener() {
