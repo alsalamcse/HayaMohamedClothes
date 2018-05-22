@@ -24,8 +24,11 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FileDownloadTask;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
@@ -71,45 +74,13 @@ public class VoteAdapter extends ArrayAdapter<Set> {
         btLike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                s.setLike(s.getLike() + 1); // TODO                // lazem a3rf lmen tabe3 leno lazm a3rf wen drg3ha
-                DatabaseReference reference;
-                reference = FirebaseDatabase.getInstance().getReference();
-
-                reference.child("SetList").child(s.getKeyId()).setValue(s).addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if (task.isSuccessful()) {
-                            Toast.makeText(getContext(), " Like is Done", Toast.LENGTH_SHORT).show();
-                            updateVote(s,true);
-                        } else {
-                            Toast.makeText(getContext(), " Like Failed", Toast.LENGTH_SHORT).show();
-
-                        }
-                    }
-                });
+              checkisvote(s,true);
             }
         });
         btDislike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                s.setDislike(s.getDislike() + 1);
-                DatabaseReference reference;
-                reference = FirebaseDatabase.getInstance().getReference();
-                reference.child("SetList").child(s.getKeyId()).setValue(s).addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if (task.isSuccessful()) {
-                            Toast.makeText(getContext(), " Disike is Done", Toast.LENGTH_SHORT).show();
-                            updateVote(s,false);
-                        } else {
-                            Toast.makeText(getContext(), "Disike  Failed", Toast.LENGTH_SHORT).show();
-
-
-                        }
-                    }
-
-
-                });
+                checkisvote(s,false);
             }
         });
         return  view;
@@ -183,6 +154,53 @@ public class VoteAdapter extends ArrayAdapter<Set> {
         } else {
             Toast.makeText(getContext(), "Upload file before downloading", Toast.LENGTH_LONG).show();
         }
+    }
+    private void checkisvote(final Set s, final boolean type){
+        FirebaseAuth auth=FirebaseAuth.getInstance();
+        FirebaseUser user=auth.getCurrentUser();
+        String email=user.getEmail();
+        s.setEmail(email);
+        email=email.replace('.','*');
+
+        DatabaseReference reference;
+        reference=FirebaseDatabase.getInstance().getReference();
+        reference.child(email).orderByKey().equalTo(s.getKeyId()).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()==false)
+                {
+                    if (type==true)
+                    s.setLike(s.getLike() + 1);// TODO                // lazem a3rf lmen tabe3 leno lazm a3rf wen drg3ha
+                    else
+                        s.setDislike(s.getDislike()+1);
+                    DatabaseReference reference;
+                    reference = FirebaseDatabase.getInstance().getReference();
+
+                    reference.child("SetList").child(s.getKeyId()).setValue(s).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if (task.isSuccessful()) {
+                                Toast.makeText(getContext(), " Like is Done", Toast.LENGTH_SHORT).show();
+                                updateVote(s,true);
+                            } else {
+                                Toast.makeText(getContext(), " Like Failed", Toast.LENGTH_SHORT).show();
+
+                            }
+                        }
+                    });
+                }
+                else
+                {
+                    Toast.makeText(getContext(),"You Voted Before",Toast.LENGTH_SHORT).show();
+
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
     }
     private void updateVote(Set s, boolean type){
         FirebaseAuth auth=FirebaseAuth.getInstance();
