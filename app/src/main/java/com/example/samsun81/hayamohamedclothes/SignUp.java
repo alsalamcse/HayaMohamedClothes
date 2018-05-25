@@ -63,7 +63,7 @@ public class SignUp extends AppCompatActivity implements  View.OnClickListener {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    Toast.makeText(SignUp.this, "Authentication Successful.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignUp.this, "...YOUR WELCOME...", Toast.LENGTH_SHORT).show();
                     finish();
                 } else {
                     Toast.makeText(SignUp.this, "Authentication Failed." + task.getException().getMessage(), Toast.LENGTH_SHORT).show();

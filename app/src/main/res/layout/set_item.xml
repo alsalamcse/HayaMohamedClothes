@@ -29,8 +29,7 @@
             android:layout_marginTop="30dp"
             android:layerType="none"
             android:text="Name"
-            android:textSize="18sp"
-            android:textStyle="normal|bold|italic" />
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/tvWather"
@@ -40,8 +39,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="18dp"
             android:text="Wather"
-            android:textSize="18sp"
-            android:textStyle="bold|italic" />
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/tvOccasion"
@@ -51,8 +49,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="16dp"
             android:text="Occasion"
-            android:textSize="18sp"
-            android:textStyle="bold|italic" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btVote"
