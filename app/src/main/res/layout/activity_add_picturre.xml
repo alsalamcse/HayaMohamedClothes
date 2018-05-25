@@ -10,84 +10,95 @@
 
     <EditText
         android:id="@+id/etName"
+        style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="NAME"
+        android:ems="18"
+        android:hint="NAME ...."
         android:inputType="textPersonName"
-        android:textColor="@color/colorAccent"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/tvTime"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Time of the year"
-        android:textAlignment="textStart"
+        android:selectAllOnFocus="false"
         android:textColor="@color/colorAccent"
         android:textStyle="bold" />
 
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
         <ImageButton
             android:id="@+id/ibWinter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@mipmap/ic_launcher"
+            app:srcCompat="@mipmap/winter"
             android:layout_alignParentTop="true"
-            android:layout_toStartOf="@+id/ibSwitch"
-            app:srcCompat="@mipmap/winter" />
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="25dp" />
 
         <ImageButton
             android:id="@+id/ibSwitch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_toStartOf="@+id/ibAutumn"
-            app:srcCompat="@mipmap/nextt" />
+            android:background="@mipmap/ic_launcher"
+            app:srcCompat="@mipmap/nextt"
+            android:layout_alignTop="@+id/ibWinter"
+            android:layout_toEndOf="@+id/ibWinter" />
 
         <ImageButton
             android:id="@+id/ibAutumn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@mipmap/ic_launcher"
             app:srcCompat="@mipmap/authem"
-            android:layout_alignParentTop="true"
-            android:layout_toStartOf="@+id/ibSwitch1" />
+            android:layout_alignTop="@+id/ibSwitch"
+            android:layout_toEndOf="@+id/ibSwitch" />
 
         <ImageButton
             android:id="@+id/ibSwitch1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_toStartOf="@+id/ibSpring"
+            android:layout_alignTop="@+id/ibAutumn"
+            android:layout_toEndOf="@+id/ibAutumn"
+            android:background="@mipmap/ic_launcher"
             app:srcCompat="@mipmap/nextt" />
 
         <ImageButton
             android:id="@+id/ibSpring"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginEnd="11dp"
-            app:srcCompat="@mipmap/spring" />
+            android:background="@mipmap/ic_launcher"
+            app:srcCompat="@mipmap/spring"
+            android:layout_alignTop="@+id/ibSwitch1"
+            android:layout_toEndOf="@+id/ibSwitch1" />
 
         <ImageButton
             android:id="@+id/ibSwitch2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@mipmap/ic_launcher"
             app:srcCompat="@mipmap/nextt"
-            android:layout_marginStart="29dp"
-            android:layout_below="@+id/ibSwitch"
-            android:layout_toEndOf="@+id/ibWinter" />
+            android:layout_alignTop="@+id/ibSpring"
+            android:layout_toEndOf="@+id/ibSwitch1"
+            android:layout_marginStart="48dp" />
 
         <ImageButton
             android:id="@+id/ibSummer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/ibAutumn"
-            android:layout_toEndOf="@+id/ibSwitch2"
-            app:srcCompat="@mipmap/summer" />
+            android:background="@mipmap/ic_launcher"
+            app:srcCompat="@mipmap/summer"
+            android:layout_alignTop="@+id/ibSwitch2"
+            android:layout_toEndOf="@+id/ibSwitch2" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="Time of the year"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 
@@ -101,67 +112,84 @@
             android:layout_height="match_parent"
             android:layout_weight="1">
 
-            <ImageButton
-                android:id="@+id/ibJoy"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_toStartOf="@+id/ibSad"
-                app:srcCompat="@mipmap/happy" />
-
-            <ImageButton
-                android:id="@+id/ibSad"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_toStartOf="@+id/ibTrip"
-                app:srcCompat="@mipmap/sad" />
-
-            <ImageButton
-                android:id="@+id/ibTrip"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_toStartOf="@+id/ibOther"
-                app:srcCompat="@mipmap/trip" />
-
-            <ImageButton
-                android:id="@+id/ibOther"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginEnd="33dp"
-                app:srcCompat="@mipmap/other" />
-
             <RelativeLayout
+                android:id="@+id/relativeLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true">
 
                 <ImageButton
-                    android:id="@+id/BtButton"
-                    android:layout_width="227dp"
-                    android:layout_height="142dp"
+                    android:id="@+id/ibOther"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/ibTrip"
+                    android:layout_toEndOf="@+id/ibTrip"
+                    android:background="@mipmap/ic_launcher"
+                    app:srcCompat="@mipmap/other" />
 
+                <ImageButton
+                    android:id="@+id/ibTrip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/ibSad"
+                    android:layout_toEndOf="@+id/ibSad"
+                    android:background="@mipmap/ic_launcher"
+                    app:srcCompat="@mipmap/trip" />
+
+                <ImageButton
+                    android:id="@+id/ibSad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/ibJoy"
+                    android:layout_toEndOf="@+id/ibJoy"
+                    android:background="@mipmap/ic_launcher"
+                    app:srcCompat="@mipmap/sad" />
+
+                <ImageButton
+                    android:id="@+id/BtButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_above="@+id/btAdd"
+                    android:layout_alignStart="@+id/textView3"
+                    android:layout_marginBottom="20dp"
+                    android:background="@android:color/holo_orange_light"
                     android:src="@android:drawable/ic_menu_camera"
                     tools:layout_editor_absoluteX="140dp"
-                    tools:layout_editor_absoluteY="16dp"
-                    android:layout_centerVertical="true"
-                    android:layout_centerHorizontal="true" />
+                    tools:layout_editor_absoluteY="16dp" />
 
                 <Button
                     android:id="@+id/btAdd"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/BtButton"
+                    android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
-                    android:background="?attr/colorAccent"
+                    android:layout_marginBottom="27dp"
+                    android:background="@android:color/holo_orange_light"
                     android:text="Add"
                     android:textColor="@color/common_google_signin_btn_text_dark_focused"
                     android:textStyle="bold"
                     android:typeface="serif" />
+
+                <ImageButton
+                    android:id="@+id/ibJoy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="34dp"
+                    android:layout_toStartOf="@+id/btAdd"
+                    android:background="@mipmap/ic_launcher"
+                    app:srcCompat="@mipmap/happy" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/ibJoy"
+                    android:layout_marginStart="18dp"
+                    android:text="occasion " />
             </RelativeLayout>
         </RelativeLayout>
 

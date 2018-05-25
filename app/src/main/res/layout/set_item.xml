@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="1"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:weightSum="1">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -14,10 +15,9 @@
             android:id="@+id/imvSet"
             android:layout_width="match_parent"
             android:layout_height="248dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="11dp"
+            android:background="@android:color/holo_blue_bright"
+            android:backgroundTint="@android:color/holo_blue_bright"
             app:srcCompat="@android:drawable/ic_menu_report_image" />
 
         <TextView
@@ -27,7 +27,10 @@
             android:layout_below="@+id/imvSet"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
-            android:text="Name" />
+            android:layerType="none"
+            android:text="Name"
+            android:textSize="18sp"
+            android:textStyle="normal|bold|italic" />
 
         <TextView
             android:id="@+id/tvWather"
@@ -36,7 +39,9 @@
             android:layout_below="@+id/tvName"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="18dp"
-            android:text="Wather" />
+            android:text="Wather"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
 
         <TextView
             android:id="@+id/tvOccasion"
@@ -45,17 +50,20 @@
             android:layout_below="@+id/tvWather"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="16dp"
-            android:text="Occasion" />
+            android:text="Occasion"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
 
         <Button
             android:id="@+id/btVote"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/tvOccasion"
+            android:layout_below="@+id/tvYes"
             android:background="@android:drawable/alert_light_frame"
             android:backgroundTint="@android:color/holo_blue_bright"
-            android:text="Share To Vote" />
+            android:text="Share To Vote"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textView"
@@ -80,17 +88,17 @@
             android:id="@+id/imageView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/tvNo"
-            android:layout_below="@+id/textView"
-            android:layout_marginStart="36dp"
+            android:layout_alignTop="@+id/tvOccasion"
+            android:layout_marginEnd="46dp"
+            android:layout_toStartOf="@+id/tvOccasion"
             app:srcCompat="@mipmap/like" />
 
         <ImageView
             android:id="@+id/imageView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textView2"
-            android:layout_marginStart="39dp"
+            android:layout_alignTop="@+id/tvOccasion"
+            android:layout_marginStart="53dp"
             android:layout_toEndOf="@+id/tvOccasion"
             app:srcCompat="@mipmap/no" />
 
@@ -98,17 +106,22 @@
             android:id="@+id/tvYes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/imageView8"
             android:layout_below="@+id/imageView8"
             android:text="0"
-            android:layout_alignStart="@+id/imageView8" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvNo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/imageView9"
             android:layout_below="@+id/imageView9"
             android:text="0"
-            android:layout_alignStart="@+id/imageView9" />
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 

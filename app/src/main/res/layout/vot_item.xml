@@ -13,58 +13,76 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/tvNo"
+            <RelativeLayout
+                android:id="@+id/relativeLayout2"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/tvYes"
-                android:layout_below="@+id/btLike"
-                android:layout_marginEnd="10dp"
-                android:layout_marginTop="13dp"
-                android:text="NO"
-                android:textAlignment="center"
-                android:textAllCaps="true"
-                android:textColor="@color/colorPrimaryDark"
-                android:textStyle="bold|italic" />
-
-            <TextView
-                android:id="@+id/tvYes"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginEnd="23dp"
-                android:layout_marginTop="59dp"
-                android:layout_toStartOf="@+id/imVote"
-                android:text="YES"
-                android:textColor="@color/colorPrimary"
-                android:textStyle="bold" />
-
-            <ImageView
-                android:id="@+id/imVote"
-                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_alignParentBottom="true"
-                android:layout_marginBottom="209dp"
-                android:layout_toEndOf="@+id/btDislike"
-                app:srcCompat="@android:drawable/ic_menu_gallery" />
-
-            <ImageButton
-                android:id="@+id/btDislike"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
-                android:layout_below="@+id/btLike"
-                android:layout_marginStart="70dp"
-                android:layout_marginTop="28dp"
-                app:srcCompat="@mipmap/dislike" />
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="14dp">
 
-            <ImageButton
-                android:id="@+id/btLike"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tvYes"
-                android:layout_toStartOf="@+id/imVote"
-                app:srcCompat="@mipmap/like" />
+                <ImageView
+                    android:id="@+id/imVote"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="96dp"
+                    android:layout_toEndOf="@+id/btLike"
+                    app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true">
+
+                    <ImageButton
+                        android:id="@+id/btDislike"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignTop="@+id/tvNo"
+                        android:layout_marginTop="24dp"
+                        android:background="@color/common_google_signin_btn_text_dark_default"
+                        android:backgroundTint="@android:color/holo_blue_light"
+                        app:srcCompat="@mipmap/dislike" />
+
+                    <ImageButton
+                        android:id="@+id/btLike"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/tvNo"
+                        android:layout_alignParentStart="true"
+                        android:background="@color/common_google_signin_btn_text_dark_default"
+                        android:backgroundTint="@android:color/holo_red_light"
+                        app:srcCompat="@mipmap/like" />
+
+                    <TextView
+                        android:id="@+id/tvNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/tvYes"
+                        android:layout_centerVertical="true"
+                        android:text="No"
+                        android:textColor="@android:color/holo_blue_dark"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvYes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/btLike"
+                        android:layout_alignStart="@+id/btLike"
+                        android:layout_marginStart="11dp"
+                        android:text="YES"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
 
         </RelativeLayout>
     </LinearLayout>
