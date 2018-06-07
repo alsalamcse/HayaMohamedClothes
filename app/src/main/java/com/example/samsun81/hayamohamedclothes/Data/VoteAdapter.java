@@ -159,7 +159,7 @@ public class VoteAdapter extends ArrayAdapter<Set> {
         FirebaseAuth auth=FirebaseAuth.getInstance();
         FirebaseUser user=auth.getCurrentUser();
         String email=user.getEmail();
-        s.setEmail(email);
+       // s.setEmail(email);
         email=email.replace('.','*');
 
         DatabaseReference reference;
