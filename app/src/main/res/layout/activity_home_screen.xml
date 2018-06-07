@@ -4,10 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/blue"
-    android:backgroundTint="@android:color/background_light"
     android:orientation="vertical"
     android:weightSum="1"
+    android:background="@drawable/wallpaper"
     tools:context="com.example.samsun81.hayamohamedclothes.HomeScreen">
 
 
@@ -16,12 +15,6 @@
         android:layout_height="wrap_content">
 
     </RelativeLayout>
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="235dp"
-        android:layout_height="236dp"
-        android:background="@mipmap/logo" />
 
     <EditText
         android:id="@+id/etEmail"
@@ -58,7 +51,7 @@
 
     <Button
         android:id="@+id/btSignup"
-        android:layout_width="match_parent"
+        android:layout_width="257dp"
         android:layout_height="35dp"
         android:layout_weight="0.29"
         android:background="@android:drawable/alert_light_frame"
