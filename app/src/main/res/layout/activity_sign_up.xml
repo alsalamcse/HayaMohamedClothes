@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.samsun81.hayamohamedclothes.SignUp">
+    tools:context="com.example.samsun81.hayamohamedclothes.SignUp"
+    android:background="@drawable/nice">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -15,14 +16,14 @@
             android:id="@+id/btSave"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="?attr/actionModeSplitBackground"
+            android:layout_below="@+id/imageView4"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="64dp"
+            android:backgroundTint="@android:color/holo_blue_dark"
             android:text="SAVE"
             android:textSize="18sp"
             tools:layout_editor_absoluteX="147dp"
-            tools:layout_editor_absoluteY="230dp"
-            android:layout_below="@+id/imageView4"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="27dp" />
+            tools:layout_editor_absoluteY="230dp" />
 
         <ImageView
             android:id="@+id/imageView4"
@@ -44,7 +45,7 @@
             android:inputType="textPassword"
             android:selectAllOnFocus="false"
             android:singleLine="false"
-            android:textColorHint="?attr/actionModeSplitBackground"
+            android:textColorHint="?attr/actionMenuTextColor"
             android:textColorLink="@android:color/holo_blue_dark"
             android:textStyle="bold"
             tools:layout_editor_absoluteX="16dp"
@@ -60,7 +61,7 @@
             android:ems="10"
             android:hint="Repassword ..."
             android:inputType="textPassword"
-            android:textColorHint="?android:attr/colorPrimary"
+            android:textColorHint="?android:attr/colorControlActivated"
             android:textColorLink="@color/colorPrimary"
             android:textStyle="bold"
             tools:layout_editor_absoluteX="16dp"
@@ -79,6 +80,7 @@
             android:inputType="textEmailAddress"
             android:textAlignment="textStart"
             android:textAllCaps="false"
+            android:textColor="@color/colorAccent"
             android:textColorHint="?android:attr/textColorTertiary"
             android:textColorLink="@color/colorPrimary"
             android:textSize="18sp"

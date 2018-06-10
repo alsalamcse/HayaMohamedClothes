@@ -15,9 +15,18 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+/**
+ *
+ */
 public class HomeScreen extends AppCompatActivity implements View.OnClickListener {
 
+    /**
+     *
+     */
     private EditText etEmail ;
+    /**
+     *
+     */
     private EditText etPassword ;
     private Button BtLogin;
     private  Button btSignup;
@@ -49,6 +58,9 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
 
     }
 
+    /**
+     *
+     */
     private void dataHandler() {
 
         String stemail = etEmail.getText().toString();
@@ -56,7 +68,11 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
         signIn(stemail, stpassword);
     }
 
-
+    /**
+     *
+     * @param email
+     * @param passw
+     */
     private void signIn(String email, String passw) {
         auth.signInWithEmailAndPassword(email,passw).addOnCompleteListener(HomeScreen.this, new OnCompleteListener<AuthResult>() {
             @Override
