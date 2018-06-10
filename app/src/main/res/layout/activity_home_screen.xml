@@ -14,50 +14,67 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
+
+            <Button
+                android:id="@+id/btSignup"
+                android:layout_width="match_parent"
+                android:layout_height="69dp"
+                android:background="@android:drawable/alert_light_frame"
+                android:backgroundTint="@android:color/holo_orange_dark"
+                android:text="SignUp"
+                tools:layout_editor_absoluteX="148dp"
+                tools:layout_editor_absoluteY="242dp"
+                android:layout_below="@+id/BtLogin"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="17dp" />
+
+            <Button
+                android:id="@+id/BtLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.17"
+                android:background="@android:drawable/alert_light_frame"
+                android:backgroundTint="@android:color/holo_orange_light"
+                android:text="LOG IN"
+                tools:layout_editor_absoluteX="148dp"
+                tools:layout_editor_absoluteY="170dp"
+                tools:text="LOG IN"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:ems="10"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:textColor="@color/colorAccent"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="83dp"
+                android:layout_above="@+id/BtLogin"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="32dp" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/etPassword"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="15dp"
+                android:layout_weight="0.08"
+                android:ems="10"
+                android:hint="@string/EMAIL"
+                android:inputType="textEmailAddress"
+                tools:layout_editor_absoluteX="9dp"
+                tools:layout_editor_absoluteY="35dp" />
+        </RelativeLayout>
     </RelativeLayout>
-
-    <EditText
-        android:id="@+id/etEmail"
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:layout_weight="0.08"
-        android:ems="10"
-        android:hint="@string/EMAIL"
-        android:inputType="textEmailAddress"
-        tools:layout_editor_absoluteX="9dp"
-        tools:layout_editor_absoluteY="35dp" />
-
-    <EditText
-        android:id="@+id/etPassword"
-        android:layout_width="match_parent"
-        android:layout_height="51dp"
-        android:ems="10"
-        android:hint="@string/password"
-        android:inputType="textPassword"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="83dp" />
-
-    <Button
-        android:id="@+id/BtLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.17"
-        android:background="@android:drawable/alert_light_frame"
-        android:backgroundTint="@android:color/holo_blue_dark"
-        android:text="LOG IN"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="170dp"
-        tools:text="LOG IN" />
-
-    <Button
-        android:id="@+id/btSignup"
-        android:layout_width="257dp"
-        android:layout_height="35dp"
-        android:layout_weight="0.29"
-        android:background="@android:drawable/alert_light_frame"
-        android:backgroundTint="@android:color/holo_blue_bright"
-        android:text="SignUp"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="242dp" />
 
 </LinearLayout>
