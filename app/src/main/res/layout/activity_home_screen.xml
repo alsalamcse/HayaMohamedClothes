@@ -36,41 +36,50 @@
                 android:id="@+id/BtLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/etPassword"
-                android:layout_marginTop="42dp"
+                android:layout_marginTop="31dp"
                 android:layout_weight="0.17"
                 android:background="@android:drawable/alert_light_frame"
                 android:backgroundTint="@color/common_google_signin_btn_text_light_default"
                 android:text="LOG IN"
                 tools:layout_editor_absoluteX="148dp"
                 tools:layout_editor_absoluteY="170dp"
-                tools:text="LOG IN" />
+                tools:text="LOG IN"
+                android:layout_below="@+id/etPassword"
+                android:layout_alignParentStart="true" />
 
             <EditText
                 android:id="@+id/etPassword"
                 android:layout_width="match_parent"
                 android:layout_height="51dp"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/etEmail"
                 android:ems="10"
                 android:hint="@string/password"
                 android:inputType="textPassword"
                 android:textColor="@color/colorAccent"
                 tools:layout_editor_absoluteX="8dp"
-                tools:layout_editor_absoluteY="83dp" />
+                tools:layout_editor_absoluteY="83dp"
+                android:layout_below="@+id/etEmail"
+                android:layout_alignParentStart="true" />
 
             <EditText
                 android:id="@+id/etEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="138dp"
+                android:layout_marginTop="28dp"
                 android:layout_weight="0.08"
                 android:ems="10"
                 android:hint="@string/EMAIL"
                 android:inputType="textEmailAddress"
                 tools:layout_editor_absoluteX="9dp"
                 tools:layout_editor_absoluteY="35dp"
+                android:layout_below="@+id/imageView2"
+                android:layout_alignParentStart="true" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="56dp"
+                app:srcCompat="@drawable/logoooo"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentStart="true" />
 

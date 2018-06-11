@@ -107,6 +107,13 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -148,13 +155,12 @@
 
                 <ImageButton
                     android:id="@+id/BtButton"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
-                    android:layout_above="@+id/btAdd"
-                    android:layout_alignStart="@+id/textView3"
-                    android:layout_marginBottom="20dp"
-                    android:background="@android:color/holo_orange_light"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/ibOther"
+                    android:background="@drawable/canon"
                     android:src="@android:drawable/ic_menu_camera"
                     tools:layout_editor_absoluteX="140dp"
                     tools:layout_editor_absoluteY="16dp" />
@@ -166,9 +172,9 @@
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="27dp"
-                    android:background="@android:color/holo_orange_light"
+                    android:background="@color/colorPrimaryDark"
                     android:text="Add"
-                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textColor="@color/common_google_signin_btn_text_light_default"
                     android:textStyle="bold"
                     android:typeface="serif" />
 
@@ -186,19 +192,13 @@
                     android:id="@+id/textView3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_above="@+id/ibSad"
                     android:layout_alignParentStart="true"
-                    android:layout_below="@+id/ibJoy"
-                    android:layout_marginStart="18dp"
-                    android:text="occasion " />
+                    android:text="occasion "
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold" />
             </RelativeLayout>
         </RelativeLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
 
     </LinearLayout>
 
