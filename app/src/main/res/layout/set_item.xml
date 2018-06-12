@@ -28,7 +28,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
             android:layerType="none"
-            android:text="Name"
+            android:text="@string/name"
             android:textSize="18sp" />
 
         <TextView
@@ -38,7 +38,7 @@
             android:layout_below="@+id/tvName"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="18dp"
-            android:text="Wather"
+            android:text="@string/wather"
             android:textSize="18sp" />
 
         <TextView
@@ -48,7 +48,7 @@
             android:layout_below="@+id/tvWather"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="16dp"
-            android:text="Occasion"
+            android:text="@string/occasion2"
             android:textSize="18sp" />
 
         <Button
@@ -59,7 +59,7 @@
             android:layout_below="@+id/tvYes"
             android:background="@android:drawable/alert_light_frame"
             android:backgroundTint="@android:color/holo_blue_bright"
-            android:text="Share To Vote"
+            android:text="@string/share_to_vote"
             android:textStyle="bold" />
 
         <TextView

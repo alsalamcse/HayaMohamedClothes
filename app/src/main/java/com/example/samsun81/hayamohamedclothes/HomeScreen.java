@@ -61,8 +61,8 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
     /**
      *
      */
-    private void dataHandler() {
-
+    private void dataHandler()
+    {
         String stemail = etEmail.getText().toString();
         String stpassword = etPassword.getText().toString();
         signIn(stemail, stpassword);
@@ -73,40 +73,42 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
      * @param email
      * @param passw
      */
-    private void signIn(String email, String passw) {
-        auth.signInWithEmailAndPassword(email,passw).addOnCompleteListener(HomeScreen.this, new OnCompleteListener<AuthResult>() {
+    private void signIn(String email, String passw)
+    {
+        auth.signInWithEmailAndPassword(email,passw).addOnCompleteListener(HomeScreen.this, new OnCompleteListener<AuthResult>()
+        {
             @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
+            public void onComplete(@NonNull Task<AuthResult> task)
+            {
                 if (task.isSuccessful()) {
                     Toast.makeText(HomeScreen.this, "signIn Successful.", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(getBaseContext(), MyClost.class);
                     startActivity(intent);
                     finish();
-                } else {
+                }
+                else
+                    {
                     Toast.makeText(HomeScreen.this, "signIn failed." + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                     task.getException().printStackTrace();
                 }
-
-
-
-
             }
         });
-
-
     }
 
 
 
 
     @Override
-    public void onClick(View view) {
+    public void onClick(View view)
+    {
 
-        if (view == BtLogin) {
+        if (view == BtLogin)
+        {
             dataHandler();
         }
 
-        if (view == btSignup) {
+        if (view == btSignup)
+        {
             Intent i = new Intent(this, SignUp.class);
             startActivity(i);
 

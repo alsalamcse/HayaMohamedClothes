@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HayaMohamedClothes</string>
+    <string name="EMAIL">بريد الكتروني</string>
+    <string name="Email">بريد الكتروني</string>
+    <string name="Password">كلمة المرور</string>
+    <string name="RePass">اعد كتابة كلمة المرور</string>
+    <string name="RePassword">اعد كتابة كلمة المرور</string>
+    <string name="Repassword">اعد كتابة كلمة المرور</string>
+    <string name="action_settings">اعدادات</string>
+    <string name="add">اضف</string>
+    <string name="e_mail">بريد لكتروني</string>
+    <string name="log_in">تسجيل دخول</string>
+    <string name="name">الاسم</string>
+    <string name="no">لا</string>
+    <string name="occasion">مناسبة</string>
+    <string name="occasion1">مناسبة</string>
+    <string name="occasion2">مناسبة</string>
+    <string name="password">كلمة المرور</string>
+    <string name="password1">كلمة المرور</string>
+    <string name="repassword">اعد كتابة كلمة المرور</string>
+    <string name="save">حفظ</string>
+    <string name="share_to_vote">انشر للتصويت</string>
+    <string name="signup">تسجيل</string>
+    <string name="wather">طقس</string>
+    <string name="welcome_to_our_app">اهلا وسهلا</string>
+    <string name="time_of_the_year">طقس</string>
+    <string name="name1">الاسم</string>
+    <string name="yes">نعم</string>
+</resources>

@@ -14,4 +14,22 @@
     <string name="title_activity_main_swipe_img">MainSwipeImgActivity</string>
     <string name="EMAIL">E-mail</string>
     <string name="password">Password</string>
+    <string name="log_in">LOG IN</string>
+    <string name="signup">SignUp</string>
+    <string name="save">SAVE</string>
+    <string name="repassword">Repassword ...</string>
+    <string name="password1">Password ...</string>
+    <string name="e_mail">E-mail</string>
+    <string name="welcome_to_our_app">WELCOME TO OUR APP</string>
+    <string name="occasion">OCCASION</string>
+    <string name="occasion1">occasion1</string>
+    <string name="add">Add</string>
+    <string name="name">Name</string>
+    <string name="wather">Wather</string>
+    <string name="occasion2">Occasion</string>
+    <string name="share_to_vote">Share To Vote</string>
+    <string name="no">No</string>
+    <string name="yes">YES</string>
+    <string name="name1">NAME</string>
+    <string name="time_of_the_year">Time of the year</string>
 </resources>

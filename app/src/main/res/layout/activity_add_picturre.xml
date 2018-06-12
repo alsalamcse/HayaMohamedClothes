@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="18"
-        android:hint="NAME ...."
+        android:hint="@string/name1"
         android:inputType="textPersonName"
         android:selectAllOnFocus="false"
         android:textColor="@color/colorAccent"
@@ -95,7 +95,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:text="Time of the year"
+            android:text="@string/time_of_the_year"
             android:textAlignment="textStart"
             android:textColor="@color/colorAccent"
             android:textStyle="bold" />
@@ -139,10 +139,10 @@
                     android:id="@+id/ibTrip"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/ibSad"
-                    android:layout_toEndOf="@+id/ibSad"
                     android:background="@mipmap/ic_launcher"
-                    app:srcCompat="@mipmap/trip" />
+                    app:srcCompat="@mipmap/trip"
+                    android:layout_alignTop="@+id/ibSad"
+                    android:layout_toEndOf="@+id/ibSad" />
 
                 <ImageButton
                     android:id="@+id/ibSad"
@@ -173,7 +173,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="27dp"
                     android:background="@color/colorPrimaryDark"
-                    android:text="Add"
+                    android:text="@string/add"
                     android:textColor="@color/common_google_signin_btn_text_light_default"
                     android:textStyle="bold"
                     android:typeface="serif" />
@@ -194,7 +194,7 @@
                     android:layout_height="wrap_content"
                     android:layout_above="@+id/ibSad"
                     android:layout_alignParentStart="true"
-                    android:text="occasion "
+                    android:text="@string/occasion1"
                     android:textColor="@color/colorAccent"
                     android:textStyle="bold" />
             </RelativeLayout>
@@ -206,7 +206,7 @@
         android:id="@+id/tvOc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="OCCASION"
+        android:text="@string/occasion"
         android:textColor="@color/colorAccent"
         android:textStyle="bold" />
 

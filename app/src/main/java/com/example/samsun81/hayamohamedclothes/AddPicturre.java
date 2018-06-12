@@ -168,6 +168,10 @@ public class AddPicturre extends AppCompatActivity {
             }
         });
     }
+
+    /**
+     * hay aldale btjble al pop up m7tot fyo mnen bde an2e sora mn algallery wla bde aswrha asa wb3den btt3alj wbtrj3le yaha 3la onactivityresult.
+     */
     public void imageDialog ()
     {
         final String [] items           = new String [] {"From Camera", "From  gallary"};
@@ -184,7 +188,6 @@ public class AddPicturre extends AppCompatActivity {
                 } else {
                    chooseImageFile();
                     dialog.cancel();
-
                 }
             }
         } );
@@ -275,16 +278,27 @@ public class AddPicturre extends AppCompatActivity {
 //        }
 //    }
 
-    private void chooseImageFile() {
+    /**
+     * hay aldale bt5lena nfta7 al gallery imn2e mn hnak sora mawjode.
+     */
+    private void chooseImageFile()  {
         Intent intent = new Intent();
         intent.setType("image/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
         startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_REQUEST);
     }
+
+    /**
+     * hay aldale bt5lena neft7 al camera wnsawer sora balwqt al7ale.
+     */
     private void chooseImageCamera() {
         Intent takePicture = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         startActivityForResult(takePicture, CAPTURE_IMAGE_REQUEST);//zero can be replaced with any action code
     }
+
+    /**
+     *hay aldale btrf3le alsowar 3la al firebase b3d ma akbis add wbs afot 3la al vote btrj3 btjble alsora mn al firebase wbtfrjene yaha.
+     */
     private void uploadImage() {
 
         if(filePath != null)

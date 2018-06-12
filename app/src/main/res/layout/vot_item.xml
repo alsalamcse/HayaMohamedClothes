@@ -63,7 +63,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignStart="@+id/tvYes"
                         android:layout_centerVertical="true"
-                        android:text="No"
+                        android:text="@string/no"
                         android:textColor="@android:color/holo_blue_dark"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -75,7 +75,7 @@
                         android:layout_above="@+id/btLike"
                         android:layout_alignStart="@+id/btLike"
                         android:layout_marginStart="11dp"
-                        android:text="YES"
+                        android:text="@string/yes"
                         android:textColor="@color/colorPrimary"
                         android:textSize="18sp"
                         android:textStyle="bold" />
