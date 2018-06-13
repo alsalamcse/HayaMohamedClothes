@@ -167,7 +167,7 @@ public class VoteAdapter extends ArrayAdapter<Set> {
         reference.child(email).orderByKey().equalTo(s.getKeyId()).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                if (dataSnapshot.exists()==false)
+                if (dataSnapshot.exists()==false)//mnfhas eza ale bdor 3leh(id) mawgod aw msh magod
                 {
                     if (type==true)
                     s.setLike(s.getLike() + 1);// TODO                // lazem a3rf lmen tabe3 leno lazm a3rf wen drg3ha

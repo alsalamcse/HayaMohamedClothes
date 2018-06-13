@@ -195,7 +195,6 @@ public class SetAdapter extends ArrayAdapter<Set> implements View.OnClickListene
     @Override
     public void onClick(View view) {
         if (view==btVote);
-        // A3ML DALA BTNKOL ALSORA+ 3dd alaswat
     }
 }
 

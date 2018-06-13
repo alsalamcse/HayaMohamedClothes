@@ -16,14 +16,14 @@
             android:id="@+id/btSave"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/imageView4"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="64dp"
             android:backgroundTint="@android:color/holo_blue_dark"
             android:text="@string/save"
             android:textSize="18sp"
             tools:layout_editor_absoluteX="147dp"
-            tools:layout_editor_absoluteY="230dp" />
+            tools:layout_editor_absoluteY="230dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="77dp" />
 
         <ImageView
             android:id="@+id/imageView4"
